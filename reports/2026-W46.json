@@ -1,0 +1,52 @@
+{
+    "week": "2026-W46",
+    "generated_at": "2026-11-15T21:57:42+00:00",
+    "rules_version": "1.0.0",
+    "submissions": {
+        "last_7_days": [],
+        "all_time": 0,
+        "outcomes_7d": []
+    },
+    "data_quality": {
+        "flags_7d": [],
+        "unmatched_open": [],
+        "unmatched_resolved_this_run": 0
+    },
+    "demand": {
+        "enquiries_7d": 0,
+        "enquiry_tonnes_month_7d": 0,
+        "estimates_7d": 0,
+        "estimate_tonnes_month_median_7d": null,
+        "estimate_modes_7d": [],
+        "fuel_requested_all": [],
+        "buyer_counties_all": []
+    },
+    "supply": {
+        "offers_7d": 0,
+        "offer_tonnes_7d": 0,
+        "materials_all": [],
+        "supplier_counties_all": [],
+        "availability_all": []
+    },
+    "engagement": {
+        "contacts_by_role_status": [],
+        "overdue_actions": 0,
+        "overdue_by_role": [],
+        "score_bands": [],
+        "activity_7d": [],
+        "top_open_leads": []
+    },
+    "etl_runs_7d": [
+        {
+            "trigger_source": "weekly",
+            "runs": 1,
+            "rules_versions": "1.0.0",
+            "extracted": "0",
+            "loaded": "0",
+            "merged": "0",
+            "rejected": "0",
+            "flagged": "0",
+            "dormant_flagged": "0"
+        }
+    ]
+}
