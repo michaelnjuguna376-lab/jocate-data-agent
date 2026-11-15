@@ -1,0 +1,4 @@
+# Secrets and logs live in ~/jocate-private on the server, never in this repository.
+*.log
+config.php
+.env

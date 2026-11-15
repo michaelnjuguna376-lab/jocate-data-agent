@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-11-16",
+  "changelog": [
+    { "version": "1.0.0", "date": "2026-11-16", "by": "setup", "change": "Initial rules: 47 counties, common aliases, unit conversions, lead scoring, follow-up timings." }
+  ],
+  "counties": [
+    "Baringo", "Bomet", "Bungoma", "Busia", "Elgeyo-Marakwet", "Embu", "Garissa", "Homa Bay", "Isiolo", "Kajiado",
+    "Kakamega", "Kericho", "Kiambu", "Kilifi", "Kirinyaga", "Kisii", "Kisumu", "Kitui", "Kwale", "Laikipia",
+    "Lamu", "Machakos", "Makueni", "Mandera", "Marsabit", "Meru", "Migori", "Mombasa", "Murang'a", "Nairobi",
+    "Nakuru", "Nandi", "Narok", "Nyamira", "Nyandarua", "Nyeri", "Samburu", "Siaya", "Taita-Taveta", "Tana River",
+    "Tharaka-Nithi", "Trans Nzoia", "Turkana", "Uasin Gishu", "Vihiga", "Wajir", "West Pokot"
+  ],
+  "county_aliases": {
+    "muranga": "Murang'a", "murang a": "Murang'a", "nairobi city": "Nairobi", "nrb": "Nairobi", "industrial area": "Nairobi",
+    "eldoret": "Uasin Gishu", "thika": "Kiambu", "ruiru": "Kiambu", "limuru": "Kiambu", "athi river": "Machakos", "mlolongo": "Machakos",
+    "naivasha": "Nakuru", "molo": "Nakuru", "kitale": "Trans Nzoia", "kapsabet": "Nandi", "nandi hills": "Nandi", "othaya": "Nyeri",
+    "karatina": "Nyeri", "kerugoya": "Kirinyaga", "chuka": "Tharaka-Nithi", "tharaka nithi": "Tharaka-Nithi", "elgeyo marakwet": "Elgeyo-Marakwet",
+    "iten": "Elgeyo-Marakwet", "taita taveta": "Taita-Taveta", "voi": "Taita-Taveta", "homabay": "Homa Bay", "kisii town": "Kisii",
+    "mumias": "Kakamega", "webuye": "Bungoma", "nanyuki": "Laikipia", "nyahururu": "Laikipia", "malindi": "Kilifi", "ukunda": "Kwale",
+    "awendo": "Migori", "sotik": "Bomet", "litein": "Kericho", "keroka": "Nyamira"
+  },
+  "units_to_tonnes": {
+    "t": 1, "ton": 1, "tons": 1, "tonne": 1, "tonnes": 1, "mt": 1, "kg": 0.001,
+    "lorry": 10, "lorries": 10, "lorry load": 10, "lorry loads": 10, "truck": 10, "trucks": 10, "truckload": 10, "truckloads": 10,
+    "bag": 0.05, "bags": 0.05,
+    "m3": 0.45, "m³": 0.45, "cubic metre": 0.45, "cubic metres": 0.45, "cubic meter": 0.45, "cubic meters": 0.45, "cbm": 0.45
+  },
+  "unit_notes": "Assumptions: a lorry load is about 10 t; a bag about 50 kg; a stacked m³ of seasoned firewood about 0.45 t. Review against real weighbridge data.",
+  "non_tonnage_units": ["trees", "acres of trees", "acres", "acre"],
+  "core_counties": ["Nakuru", "Uasin Gishu", "Kericho", "Nandi", "Murang'a", "Nyeri", "Kiambu", "Embu", "Meru", "Machakos", "Nairobi", "Kakamega", "Bungoma"],
+  "scoring": {
+    "has_phone": 20, "has_email": 10, "has_company": 10,
+    "volume_tonnes_bands": [[500, 30], [200, 22], [50, 14], [1, 6]],
+    "core_county": 10, "available_now": 15, "repeat_contact": 10
+  },
+  "follow_up": {
+    "buyer_new": { "hours": 24, "action": "Call to qualify: boiler type, monthly volume, delivery site" },
+    "supplier_new": { "hours": 72, "action": "Call to arrange inspection or sample" },
+    "supplier_now": { "hours": 24, "action": "Priority: material available now, arrange inspection" },
+    "dormant_days": 30,
+    "dormant_action": "Re-engage: share a relevant Insights article and ask about current fuel needs"
+  }
+}
