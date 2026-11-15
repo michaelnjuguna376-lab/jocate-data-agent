@@ -10,7 +10,8 @@ if (PHP_SAPI !== 'cli') { http_response_code(403); exit; }
 require_once __DIR__ . '/../lib/etl.php';
 require_once __DIR__ . '/../lib/report.php';
 
-$useGit = !in_array('--no-git', $argv, true) && is_dir(JOCATE_HOME . '/.git');
+// Hostinger disables exec() for PHP; there, weekly.sh handles git and calls this script with --no-git.
+$useGit = !in_array('--no-git', $argv, true) && is_dir(JOCATE_HOME . '/.git') && function_exists('exec');
 $git = function (string $args) {
     $cmd = 'cd ' . escapeshellarg(JOCATE_HOME) . ' && git ' . $args . ' 2>&1';
     exec($cmd, $out, $code);
