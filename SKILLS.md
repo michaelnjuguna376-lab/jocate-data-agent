@@ -13,3 +13,7 @@ What the agent can do today. The agent adds a row whenever it learns a new, repe
 | Follow-up scheduling | 2026-11-16 | 1.0 | Sets next action and due time per role; flags dormant contacts after 30 days |
 | Unmatched-value learning | 2026-11-16 | 1.0 | Reviews values the rules couldn't map and adds aliases or units with evidence |
 | Weekly findings | 2026-11-16 | 1.0 | Health check, funnel, supply-vs-demand gaps, call order, message drafts |
+﻿| Prospect research (Potential Partners) | 2026-11-16 | 1.0 | Deep-research method: plan, search wide then deep, verify, cite company-level evidence (`.claude/skills/prospect-research`) |
+| Prospect scoring | 2026-11-16 | 1.0 | 0â€“100 fit score on heat demand, haul distance, fossil fuel, scale, signals and access, plus confidence (`knowledge/scoring.md`) |
+| Hotspot rotation | 2026-11-16 | 1.0 | Weekly focus rotates through 10 demand hotspots (`knowledge/hotspots.json`), tracked in `prospects/coverage.json` |
+| Tender and fuel-switch watch | 2026-11-16 | 1.0 | Weekly scan for biomass, firewood and briquette tenders and boiler conversions |

@@ -1,0 +1,21 @@
+{
+  "note": "Demand hotspots and supply belts from Jocate's supply-lines research (https://jocateorg.com/insights/supply-lines). Coordinates are town centres; distances are approximate road km. The agent rotates its weekly focus through these hotspots.",
+  "demand_hotspots": [
+    { "id": "nairobi", "name": "Nairobi (Industrial Area, Baba Dogo, Ruaraka)", "county": "Nairobi", "lat": -1.29, "lon": 36.82, "km_to_nearest_belt": 85, "nearest_belt": "central", "sectors": ["brewing", "food", "edible-oil", "packaging", "chemicals", "textiles", "hospitals"] },
+    { "id": "athi-river", "name": "Athi River, Mlolongo and EPZ", "county": "Machakos", "lat": -1.46, "lon": 36.98, "km_to_nearest_belt": 110, "nearest_belt": "central", "sectors": ["textiles", "food", "chemicals", "packaging", "meat"] },
+    { "id": "thika-ruiru", "name": "Thika, Ruiru, Juja", "county": "Kiambu", "lat": -1.03, "lon": 37.07, "km_to_nearest_belt": 45, "nearest_belt": "central", "sectors": ["food", "beverage", "textiles", "paper", "tanning", "feed"] },
+    { "id": "limuru", "name": "Limuru, Tigoni", "county": "Kiambu", "lat": -1.11, "lon": 36.64, "km_to_nearest_belt": 60, "nearest_belt": "central", "sectors": ["tea", "food", "dairy"] },
+    { "id": "nakuru-naivasha", "name": "Nakuru, Naivasha, Molo", "county": "Nakuru", "lat": -0.30, "lon": 36.07, "km_to_nearest_belt": 0, "nearest_belt": "rift", "sectors": ["food", "dairy", "feed", "horticulture", "beverage"] },
+    { "id": "eldoret", "name": "Eldoret", "county": "Uasin Gishu", "lat": 0.52, "lon": 35.27, "km_to_nearest_belt": 0, "nearest_belt": "rift", "sectors": ["milling", "dairy", "textiles", "feed"] },
+    { "id": "kericho-tea", "name": "Kericho, Nandi Hills, Bomet tea belt", "county": "Kericho", "lat": -0.37, "lon": 35.28, "km_to_nearest_belt": 0, "nearest_belt": "rift", "sectors": ["tea"] },
+    { "id": "central-tea-dairy", "name": "Nyeri, Murang'a, Kirinyaga, Embu, Meru", "county": "Nyeri", "lat": -0.42, "lon": 36.95, "km_to_nearest_belt": 0, "nearest_belt": "central", "sectors": ["tea", "coffee", "dairy", "macadamia"] },
+    { "id": "kisumu-west", "name": "Kisumu and the western sugar belt", "county": "Kisumu", "lat": -0.09, "lon": 34.77, "km_to_nearest_belt": 0, "nearest_belt": "western", "sectors": ["sugar", "ethanol", "food", "beverage"] },
+    { "id": "mombasa", "name": "Mombasa and the coast", "county": "Mombasa", "lat": -4.04, "lon": 39.67, "km_to_nearest_belt": 485, "nearest_belt": "central", "sectors": ["edible-oil", "refining", "food", "port-processing"] }
+  ],
+  "supply_belts": [
+    { "id": "central", "name": "Central and Eastern highlands", "counties": ["Murang'a", "Nyeri", "Kiambu", "Embu", "Meru", "Kirinyaga"], "materials": ["eucalyptus", "macadamia shells", "coffee husks"], "km_to_nairobi": "85-225" },
+    { "id": "rift", "name": "Rift Valley highlands", "counties": ["Uasin Gishu", "Nandi", "Kericho", "Nakuru", "Bomet"], "materials": ["eucalyptus", "cypress", "sawdust"], "km_to_nairobi": "160-310" },
+    { "id": "western", "name": "Western sugar belt", "counties": ["Kakamega", "Bungoma", "Kisumu"], "materials": ["farm wood", "bagasse"], "km_to_nairobi": "345-365" }
+  ],
+  "rotation": ["nairobi", "thika-ruiru", "nakuru-naivasha", "athi-river", "central-tea-dairy", "eldoret", "kericho-tea", "limuru", "kisumu-west", "mombasa"]
+}

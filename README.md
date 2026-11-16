@@ -20,6 +20,17 @@ Website forms ──► /api/submit.php ──► MySQL (raw submissions)
                  records LEARNINGS.md + SKILLS.md, then commits and pushes
 ```
 
+## Potential partners (second agent)
+
+```
+Friday 07:00 EAT: Potential Partners agent (Claude, agent/potential-partners.md)
+   reads knowledge/ (market brief, hotspots, scoring) + researches online (prospect-research skill)
+   → prospects/prospects.json (cited, company-level) + prospects/reports/YYYY-Www.md, then commits and pushes
+Friday 10:00 EAT: server/bin/prospects.sh
+   git pull → MySQL jocate_prospects (team status and notes preserved) → emails the report to the company address
+   → admin page: https://jocateorg.com/admin/?view=partners
+```
+
 ## What lives where
 
 | Path | Purpose |

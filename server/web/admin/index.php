@@ -43,11 +43,20 @@ $authed = !empty($_SESSION['auth']) && $_SESSION['auth'] > time() - 8 * 3600;
 
 $db = jocate_db();
 $statuses = ['new', 'contacted', 'qualified', 'active', 'won', 'lost', 'dormant'];
+$pstatuses = ['new', 'researching', 'approached', 'meeting', 'proposal', 'won', 'not-a-fit'];
 
 // ---------- actions ----------
 if ($authed && $_SERVER['REQUEST_METHOD'] === 'POST') {
     check_csrf();
     $a = $_POST['action'] ?? '';
+    if ($a === 'prospect') {
+        $pid = (int) $_POST['id'];
+        $ts = in_array($_POST['team_status'] ?? '', $pstatuses, true) ? $_POST['team_status'] : 'new';
+        $db->prepare('UPDATE jocate_prospects SET team_status=?, team_notes=?, updated_at=? WHERE id=?')
+           ->execute([$ts, mb_substr(trim((string) ($_POST['team_notes'] ?? '')), 0, 4000) ?: null, jocate_now(), $pid]);
+        $_SESSION['flash'] = 'Prospect updated.';
+        go('view=partners#p' . $pid);
+    }
     if ($a === 'etl') { $r = jocate_etl('admin'); $_SESSION['flash'] = "Processed {$r['extracted']} new submission(s): {$r['loaded']} loaded, {$r['merged']} merged, {$r['rejected']} rejected."; go(); }
     if ($a === 'update') {
         $id = (int) $_POST['id'];
@@ -111,6 +120,7 @@ $flash = $_SESSION['flash'] ?? null; unset($_SESSION['flash']);
     <div style="display:flex;gap:8px;flex-wrap:wrap">
       <form method="post"><input type="hidden" name="csrf" value="<?= h(csrf()) ?>"><input type="hidden" name="action" value="etl"><button class="btn btn-ghost" type="submit">Process new submissions</button></form>
       <a class="btn btn-ghost" href="?export=1">Export CSV</a>
+      <a class="btn btn-ghost" href="?view=partners">Potential partners</a>
       <a class="btn btn-ghost" href="?view=estimates">Calculator estimates</a>
       <a class="btn btn-ghost" href="?logout=1">Sign out</a>
     </div>
@@ -163,7 +173,49 @@ $flash = $_SESSION['flash'] ?? null; unset($_SESSION['flash']);
       </ul></div>
     </div>
   </div>
-<?php endif; elseif (($_GET['view'] ?? '') === 'estimates'):
+<?php endif; elseif (($_GET['view'] ?? '') === 'partners'):
+    $band = in_array($_GET['band'] ?? '', ['priority', 'strong', 'watch'], true) ? $_GET['band'] : '';
+    $hs = preg_match('/^[a-z-]{2,40}$/', (string) ($_GET['hotspot'] ?? '')) ? $_GET['hotspot'] : '';
+    $w = ['research_status <> "closed"']; $args = [];
+    if ($band) { $w[] = 'band = ?'; $args[] = $band; }
+    if ($hs) { $w[] = 'hotspot = ?'; $args[] = $hs; }
+    $st = $db->prepare('SELECT * FROM jocate_prospects WHERE ' . implode(' AND ', $w) . ' ORDER BY fit_score DESC, company LIMIT 300'); $st->execute($args);
+    $rows = $st->fetchAll();
+    $hotspots = $db->query('SELECT hotspot, COUNT(*) n FROM jocate_prospects WHERE research_status <> "closed" GROUP BY hotspot ORDER BY n DESC')->fetchAll();
+    $lastRun = $db->query('SELECT * FROM jocate_prospect_runs ORDER BY id DESC LIMIT 1')->fetch(); ?>
+  <p><a href="./">&larr; All contacts</a></p>
+  <h2 style="font-size:1.4rem;margin-bottom:4px">Potential partners</h2>
+  <p class="muted">Researched every Friday by the Potential Partners agent (company-level public information, cited). Last import: <?= $lastRun ? h(substr($lastRun['run_at'], 0, 16)) . ' UTC · ' . (int) $lastRun['inserted'] . ' new, ' . (int) $lastRun['updated'] . ' updated' . ($lastRun['emailed'] ? ' · emailed' : '') : 'not yet' ?>.</p>
+  <div class="filters-row">
+    <a href="?view=partners" class="<?= !$band && !$hs ? 'on' : '' ?>">All</a>
+    <?php foreach (['priority', 'strong', 'watch'] as $b): ?><a href="?view=partners&amp;band=<?= $b ?>" class="<?= $band === $b ? 'on' : '' ?>"><?= ucfirst($b) ?></a><?php endforeach; ?>
+    <?php foreach ($hotspots as $x): ?><a href="?view=partners&amp;hotspot=<?= h($x['hotspot']) ?>" class="<?= $hs === $x['hotspot'] ? 'on' : '' ?>"><?= h($x['hotspot']) ?> (<?= (int) $x['n'] ?>)</a><?php endforeach; ?>
+  </div>
+  <?php if (!$rows): ?><div class="card"><p>No prospects yet. The agent's first research run will fill this list.</p></div><?php endif; ?>
+  <?php foreach ($rows as $p): $ev = json_decode((string) $p['evidence'], true) ?: []; ?>
+  <div class="card" id="p<?= (int) $p['id'] ?>" style="margin-bottom:14px">
+    <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div><h3 style="margin:0"><?= h($p['company']) ?></h3>
+        <p class="muted" style="margin:2px 0 8px"><?= h($p['sector']) ?> · tier <?= h($p['tier']) ?> · <?= h($p['towns']) ?> · hub: <?= h($p['hotspot']) ?></p></div>
+      <div style="text-align:right"><span class="pill <?= $p['band'] === 'priority' ? 'won' : '' ?>"><?= h($p['band']) ?> · <?= (int) $p['fit_score'] ?></span><br><span class="muted">confidence: <?= h($p['confidence']) ?></span></div>
+    </div>
+    <p style="margin:0 0 6px"><?= h($p['summary']) ?></p>
+    <?php if ($p['current_fuel']): ?><p class="muted" style="margin:0 0 4px"><strong>Fuel:</strong> <?= h($p['current_fuel']) ?></p><?php endif; ?>
+    <?php if ($p['signals']): ?><p class="muted" style="margin:0 0 4px"><strong>Signals:</strong> <?= h($p['signals']) ?></p><?php endif; ?>
+    <?php if ($p['suggested_angle']): ?><p style="margin:0 0 4px"><strong>Angle:</strong> <?= h($p['suggested_angle']) ?></p><?php endif; ?>
+    <?php if ($p['next_step']): ?><p style="margin:0 0 8px"><strong>Next step:</strong> <?= h($p['next_step']) ?></p><?php endif; ?>
+    <p class="muted" style="margin:0 0 8px"><?= $p['website'] ? '<a href="' . h($p['website']) . '" target="_blank" rel="noopener">Website</a>' : '' ?><?= $p['procurement_url'] ? ' · <a href="' . h($p['procurement_url']) . '" target="_blank" rel="noopener">Procurement</a>' : '' ?>
+      · Evidence: <?php foreach ($ev as $i => $e): ?><a href="<?= h($e['url'] ?? '#') ?>" target="_blank" rel="noopener" title="<?= h(($e['claim'] ?? '') . ' (' . ($e['source'] ?? '') . ', ' . ($e['date'] ?? '') . ')') ?>">[<?= $i + 1 ?>]</a> <?php endforeach; ?>
+      · reviewed <?= h($p['last_reviewed']) ?></p>
+    <form method="post" class="form-row" style="align-items:end">
+      <input type="hidden" name="csrf" value="<?= h(csrf()) ?>"><input type="hidden" name="action" value="prospect"><input type="hidden" name="id" value="<?= (int) $p['id'] ?>">
+      <div class="field" style="margin:0"><label for="ts<?= (int) $p['id'] ?>">Team status</label><select id="ts<?= (int) $p['id'] ?>" name="team_status"><?php foreach ($pstatuses as $s): ?><option <?= $s === $p['team_status'] ? 'selected' : '' ?>><?= h($s) ?></option><?php endforeach; ?></select></div>
+      <div class="field" style="margin:0"><label for="tn<?= (int) $p['id'] ?>">Team notes</label><input id="tn<?= (int) $p['id'] ?>" name="team_notes" value="<?= h($p['team_notes']) ?>"></div>
+      <button class="btn btn-primary" type="submit" style="min-height:48px">Save</button>
+    </form>
+  </div>
+  <?php endforeach; ?>
+<?php elseif (($_GET['view'] ?? '') === 'estimates'):
     $rows = $db->query('SELECT l.id, l.created_at, l.fuel, l.monthly_tonnes, l.details, s.channel FROM jocate_leads l JOIN jocate_submissions s ON s.id=l.submission_id WHERE l.type="fuel_estimate" ORDER BY l.id DESC LIMIT 300')->fetchAll(); ?>
   <p><a href="./">&larr; All contacts</a></p>
   <h2 style="font-size:1.3rem">Calculator estimates sent (anonymous)</h2>

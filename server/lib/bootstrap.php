@@ -127,6 +127,46 @@ function jocate_migrate(PDO $db): void {
         flagged INT NOT NULL DEFAULT 0,
         dormant_flagged INT NOT NULL DEFAULT 0
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
+    $db->exec("CREATE TABLE IF NOT EXISTS jocate_prospects (
+        id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        slug VARCHAR(120) NOT NULL UNIQUE,
+        company VARCHAR(190) NOT NULL,
+        sector VARCHAR(40) NULL,
+        tier CHAR(1) NULL,
+        hotspot VARCHAR(40) NULL,
+        towns VARCHAR(255) NULL,
+        website VARCHAR(255) NULL,
+        procurement_url VARCHAR(255) NULL,
+        summary TEXT NULL,
+        current_fuel VARCHAR(255) NULL,
+        signals TEXT NULL,
+        fit_score INT NOT NULL DEFAULT 0,
+        band VARCHAR(12) NULL,
+        confidence VARCHAR(8) NULL,
+        suggested_angle TEXT NULL,
+        next_step VARCHAR(255) NULL,
+        research_status VARCHAR(12) NULL,
+        evidence JSON NULL,
+        first_seen DATE NULL,
+        last_reviewed DATE NULL,
+        team_status VARCHAR(20) NOT NULL DEFAULT 'new',
+        team_notes TEXT NULL,
+        imported_at DATETIME NOT NULL,
+        updated_at DATETIME NOT NULL,
+        INDEX (band), INDEX (hotspot), INDEX (team_status)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
+    $db->exec("CREATE TABLE IF NOT EXISTS jocate_prospect_runs (
+        id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        run_at DATETIME NOT NULL,
+        week VARCHAR(10) NOT NULL,
+        total INT NOT NULL DEFAULT 0,
+        inserted INT NOT NULL DEFAULT 0,
+        updated INT NOT NULL DEFAULT 0,
+        unchanged INT NOT NULL DEFAULT 0,
+        rejected INT NOT NULL DEFAULT 0,
+        emailed TINYINT NOT NULL DEFAULT 0,
+        note VARCHAR(255) NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
     $db->exec("CREATE TABLE IF NOT EXISTS jocate_unmatched (
         id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         field VARCHAR(30) NOT NULL,
