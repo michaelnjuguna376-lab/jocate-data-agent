@@ -137,3 +137,58 @@ function jocate_prospects_email(array $import, bool $force = false): array {
     if ($ok) { $state['last_week'] = $week; $state['sent_at'] = gmdate('c'); @file_put_contents($stateFile, json_encode($state)); }
     return ['sent' => $ok, 'week' => $week, 'to' => $to];
 }
+
+/** Short WhatsApp version of the weekly findings: pipeline counts + top 5 + links. */
+function jocate_prospects_whatsapp_text(string $week, array $import): string {
+    $db = jocate_db();
+    $counts = $db->query('SELECT band, COUNT(*) n FROM jocate_prospects WHERE research_status <> "closed" GROUP BY band')->fetchAll(PDO::FETCH_KEY_PAIR);
+    $top = $db->query('SELECT company, towns, hotspot, fit_score, band, confidence, next_step FROM jocate_prospects
+                       WHERE research_status <> "closed" AND team_status NOT IN ("won","not-a-fit")
+                       ORDER BY fit_score DESC, last_reviewed DESC LIMIT 5')->fetchAll(PDO::FETCH_ASSOC);
+    $t = "*JOCATE · Potential partners $week*\n"
+       . (int) array_sum($counts) . ' open prospects: ' . (int) ($counts['priority'] ?? 0) . ' priority, ' . (int) ($counts['strong'] ?? 0) . ' strong, ' . (int) ($counts['watch'] ?? 0) . " watch\n"
+       . 'This week: ' . (int) ($import['inserted'] ?? 0) . ' new, ' . (int) ($import['updated'] ?? 0) . " updated\n\n*Top 5 to approach*\n";
+    foreach ($top as $i => $p) {
+        $where = $p['towns'] ?: $p['hotspot'];
+        $t .= ($i + 1) . '. *' . $p['company'] . '*' . ($where ? " ($where)" : '') . ' - ' . (int) $p['fit_score'] . ' ' . $p['band'] . ', ' . $p['confidence'] . " confidence\n";
+        if (!empty($p['next_step'])) $t .= '   Next: ' . mb_strimwidth((string) $p['next_step'], 0, 140, '...') . "\n";
+    }
+    $t .= "\nFull list: https://jocateorg.com/admin/?view=partners\nFull report emailed to the company inbox.\n_Company-level public info only. Verify before approaching._";
+    return mb_substr($t, 0, 1800);
+}
+
+/**
+ * Send the weekly findings to WhatsApp via CallMeBot, once per report week per number.
+ * Config (~/jocate-private/config.php): 'whatsapp' => ['254720922376' => 'apikey', '254768834778' => 'apikey']
+ */
+function jocate_prospects_whatsapp(array $import, bool $force = false): array {
+    $cfg = jocate_config();
+    $recipients = $cfg['whatsapp'] ?? [];
+    if (!$recipients) return ['sent' => 0, 'reason' => 'no WhatsApp recipients configured'];
+    $latest = JOCATE_HOME . '/prospects/reports/LATEST.md';
+    if (!is_file($latest) || !preg_match('/\(([0-9]{4}-W[0-9]{2})\.md\)/', (string) file_get_contents($latest), $m)) return ['sent' => 0, 'reason' => 'no report yet'];
+    $week = $m[1];
+    $stateFile = JOCATE_PRIVATE . '/prospects-whatsapp.json';
+    $state = is_file($stateFile) ? (json_decode((string) file_get_contents($stateFile), true) ?: []) : [];
+    $text = jocate_prospects_whatsapp_text($week, $import);
+    $results = [];
+    foreach ($recipients as $phone => $apikey) {
+        $phone = preg_replace('/\D/', '', (string) $phone);
+        $ref = substr($phone, -3);  // never log full numbers
+        if (!$apikey) { $results[$ref] = 'no apikey'; continue; }
+        if (!$force && ($state[$phone] ?? '') === $week) { $results[$ref] = "already sent $week"; continue; }
+        $url = 'https://api.callmebot.com/whatsapp.php?' . http_build_query(['phone' => '+' . $phone, 'text' => $text, 'apikey' => $apikey]);
+        $ch = curl_init($url);
+        curl_setopt_array($ch, [CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => 30, CURLOPT_FOLLOWLOCATION => true]);
+        $body = (string) curl_exec($ch);
+        $code = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        $ok = $code === 200 && preg_match('/queued|sent/i', $body) === 1;
+        $results[$ref] = $ok ? 'sent' : "failed (HTTP $code: " . mb_substr(trim(strip_tags($body)), 0, 120) . ')';
+        jocate_log('prospects.log', "whatsapp $week to ...$ref: " . $results[$ref]);
+        if ($ok) $state[$phone] = $week;
+        sleep(3);  // CallMeBot rate limit
+    }
+    @file_put_contents($stateFile, json_encode($state));
+    return ['week' => $week, 'results' => $results];
+}
