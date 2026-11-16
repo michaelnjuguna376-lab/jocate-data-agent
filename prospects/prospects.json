@@ -1,4 +1,396 @@
 {
   "updated": "2026-11-16",
-  "prospects": []
+  "prospects": [
+    {
+      "id": "del-monte-kenya",
+      "company": "Del Monte Kenya",
+      "sector": "food",
+      "tier": "A",
+      "hotspot": "thika-ruiru",
+      "sites": [
+        {
+          "town": "Thika",
+          "county": "Kiambu"
+        }
+      ],
+      "summary": "Pineapple grower and processor (canning, juice concentrate, new frozen IQF line) at Thika; fruit processing needs process steam.",
+      "current_fuel": "Unverified: sector norm is fossil or biomass-fired steam; an older report mentions a planned biogas/CHP plant (status unconfirmed)",
+      "signals": [
+        "expansion: IQF frozen-fruit line and solar plant unveiled Feb 2026",
+        "aligned with UN global standards (ESG)"
+      ],
+      "fit_score": 80,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 15,
+        "signals": 10,
+        "access": 0
+      },
+      "band": "priority",
+      "confidence": "low",
+      "suggested_angle": "Steam fuel is unverified and a biogas plan may reduce demand; open by asking about boiler fuel and peak-season cover. See https://jocateorg.com/insights/fuel-shock-2026",
+      "next_step": "Verify boiler fuel on company sustainability pages before approaching; then request a boiler review meeting",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Del Monte Kenya unveiled a KES 516m frozen facility and 807 kW solar plant at Thika",
+          "url": "https://www.thikatowntoday.co.ke/2026/02/del-monte-kenya-unveils-kes-516-million.html",
+          "source": "Thika Town Today",
+          "date": "2026-02"
+        },
+        {
+          "claim": "Marked 60 years of operations and an economic impact report",
+          "url": "https://www.the-star.co.ke/news/2026-05-05-del-monte-kenya-marks-60-years-unveils-sh100bn-economic-impact-report",
+          "source": "The Star",
+          "date": "2026-05-05"
+        },
+        {
+          "claim": "Planned biogas plant at Thika farm to meet 100% of energy needs (status unconfirmed)",
+          "url": "https://www.bioenergy-news.com/news/biogas-plant-to-fulfil-100-of-del-montes-energy-needs/",
+          "source": "Bioenergy News",
+          "date": "undated"
+        },
+        {
+          "claim": "Aligns with UN global standards (sustainability)",
+          "url": "https://africasustainabilitymatters.com/major-step-for-kenyan-agribusiness-del-monte-kenya-aligns-with-un-global-standards/",
+          "source": "Africa Sustainability Matters",
+          "date": "undated"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "unilever-kenya-nairobi",
+      "company": "Unilever Kenya (Nairobi factory)",
+      "sector": "other",
+      "tier": "B",
+      "hotspot": "nairobi",
+      "sites": [
+        {
+          "town": "Nairobi",
+          "county": "Nairobi"
+        }
+      ],
+      "summary": "Consumer-goods factory in Nairobi that has moved boilers from HFO to biomass and plans to move hot-air generation off HFO to biomass-based fuels. Product mix not verified.",
+      "current_fuel": "Boilers moved HFO to biomass (per company); hot-air generation still HFO, planned switch to biomass-based fuels (Oct 2026)",
+      "signals": [
+        "decarbonisation: emissions down about 40% vs 2023 baseline",
+        "planned next phase: hot-air generation HFO to biomass",
+        "solar 800 kW operational June 2026"
+      ],
+      "fit_score": 70,
+      "score_breakdown": {
+        "heat": 15,
+        "distance": 20,
+        "fossil": 15,
+        "scale": 15,
+        "signals": 5,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "medium",
+      "suggested_angle": "Next-phase hot-air switch is a live buying window; offer seasoned firewood or residue blends sized for a hot-air generator. See https://jocateorg.com/insights/fuel-shock-2026",
+      "next_step": "Check the company's Kenya sustainability and supplier pages; request a fuel-supply conversation",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Earlier HFO-to-biomass boiler switch plus solar cut Nairobi plant emissions about 40% vs 2023; next phase moves hot-air generation from HFO to biomass-based fuels",
+          "url": "https://allafrica.com/stories/202610060184.html",
+          "source": "AllAfrica (Standard)",
+          "date": "2026-10-06"
+        },
+        {
+          "claim": "Unilever invests Ksh70m in solar at Nairobi factory",
+          "url": "https://citizen.digital/article/unilever-invests-ksh70-million-in-solar-power-at-nairobi-factory-n391866",
+          "source": "Citizen Digital",
+          "date": "2026-10"
+        },
+        {
+          "claim": "Same project, targeting lower energy costs and emissions",
+          "url": "https://africasustainabilitymatters.com/unilever-invests-ksh70-million-in-nairobi-solar-project-as-factory-targets-lower-energy-costs-and-emissions/",
+          "source": "Africa Sustainability Matters",
+          "date": "2026-10"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "kapa-oil-refineries",
+      "company": "Kapa Oil Refineries",
+      "sector": "edible-oil",
+      "tier": "A",
+      "hotspot": "nairobi",
+      "sites": [
+        {
+          "town": "Nairobi",
+          "county": "Nairobi"
+        }
+      ],
+      "summary": "Nairobi maker of edible oils, fats, soaps, detergents and tissue. Runs a 22 TPH biomass boiler on agro-residues, so already a biomass buyer. Separate from Edible Oil Refineries (existing client): confirm before approaching.",
+      "current_fuel": "22 TPH biomass boiler on coffee husks, corn cobs, macadamia shells (company report 2019-2020); no fossil boiler fuel evidenced",
+      "signals": [
+        "UN Global Compact participant (ESG reporting)",
+        "already biomass: potential supplier of residues and blends"
+      ],
+      "fit_score": 70,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 0,
+        "scale": 15,
+        "signals": 5,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "low",
+      "suggested_angle": "Existing biomass user: pitch dependable macadamia shell and husk supply and seasoned wood as top-up. See https://jocateorg.com/insights/supply-lines",
+      "next_step": "Confirm group relationship vs Edible Oil Refineries; find the public supplier page",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "22 TPH biomass boiler using agricultural waste; wood fuel use fell 3,889,000 kg in 2020 vs 2019",
+          "url": "https://kapa.5dm.africa/wp-content/uploads/2024/01/Kapa-Oil-Refineries-Limited-COP-SDG_Report-2019-2020.pdf",
+          "source": "Kapa UNGC COP/SDG report 2019-2020 (file uploaded 2024-01)",
+          "date": "2024-01"
+        },
+        {
+          "claim": "UN Global Compact participant",
+          "url": "https://unglobalcompact.org/what-is-gc/participants/16456",
+          "source": "UN Global Compact",
+          "date": "undated"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "kevian-kenya",
+      "company": "Kevian Kenya (Afia, Pick N Peel)",
+      "sector": "food",
+      "tier": "A",
+      "hotspot": "thika-ruiru",
+      "sites": [
+        {
+          "town": "Thika",
+          "county": "Kiambu"
+        },
+        {
+          "town": "Nairobi",
+          "county": "Nairobi"
+        }
+      ],
+      "summary": "Juice maker with plants at Thika and Nairobi; juice pasteurising and filling use steam. Expansion report is old, so verify current status.",
+      "current_fuel": "Unverified: sector norm is oil-fired steam",
+      "signals": [],
+      "fit_score": 70,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 15,
+        "signals": 0,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "low",
+      "suggested_angle": "Verify the plants' boiler fuel first; if fossil, lead with the heat-cost gap. See https://jocateorg.com/insights/fuel-shock-2026",
+      "next_step": "Check recent news on plant upgrades and boiler fuel before approaching",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Sh1bn expansion plan after Sh3bn DEG loan for equipment at Thika and Nairobi plants (undated, likely older than 24 months)",
+          "url": "https://www.standardmedia.co.ke/business/article/2001229561/juice-maker-eyes-bigger-market-slice-with-sh1b-war-chest",
+          "source": "The Standard",
+          "date": "undated"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "brookside-dairy",
+      "company": "Brookside Dairy",
+      "sector": "dairy",
+      "tier": "A",
+      "hotspot": "thika-ruiru",
+      "sites": [
+        {
+          "town": "Ruiru",
+          "county": "Kiambu"
+        }
+      ],
+      "summary": "Large dairy processor with head office at Ruiru; pasteurising and UHT need steam. A 2012-13 study lists a diesel-fired boiler (old).",
+      "current_fuel": "Diesel-fired boiler per 2012-13 pre-feasibility study (old, unconfirmed today)",
+      "signals": [],
+      "fit_score": 63,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 8,
+        "signals": 0,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "low",
+      "suggested_angle": "Central dairy belt is close to supply; ask about current boiler fuel. See https://jocateorg.com/insights/supply-lines",
+      "next_step": "Verify current boiler fuel and site list from company sources",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Head office in Ruiru",
+          "url": "https://en.wikipedia.org/wiki/Brookside_Dairies",
+          "source": "Wikipedia",
+          "date": "undated"
+        },
+        {
+          "claim": "Pre-feasibility dairy study lists a Brookside diesel-fired boiler (2012-13, old)",
+          "url": "https://www.slideshare.net/nayansavla/prefeasibility-dairystudy",
+          "source": "SlideShare study",
+          "date": "2013"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "east-african-paper-mills",
+      "company": "East African Paper Mills",
+      "sector": "paper-packaging",
+      "tier": "A",
+      "hotspot": "thika-ruiru",
+      "sites": [
+        {
+          "town": "Thika",
+          "county": "Kiambu"
+        }
+      ],
+      "summary": "Thika paper maker supplying corrugated box industry; drying needs steam. Capacity upgrade to 100 TPD reported (undated).",
+      "current_fuel": "Unverified: sector norm is fossil or biomass-fired steam",
+      "signals": [],
+      "fit_score": 63,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 8,
+        "signals": 0,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "low",
+      "suggested_angle": "Paper drying runs steam all day; verify boiler fuel and ask about the capacity upgrade. See https://jocateorg.com/insights/fuel-shock-2026",
+      "next_step": "Find the upgrade date and boiler details on company or trade sources",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Upgraded to 100 TPD (EAPML, Thika)",
+          "url": "https://papermart.in/amit-paper-consultants-and-engineers/",
+          "source": "Papermart",
+          "date": "undated"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "aga-khan-university-hospital-nairobi",
+      "company": "Aga Khan University Hospital, Nairobi",
+      "sector": "hospital",
+      "tier": "B",
+      "hotspot": "nairobi",
+      "sites": [
+        {
+          "town": "Nairobi",
+          "county": "Nairobi"
+        }
+      ],
+      "summary": "Hospital that replaced diesel boilers with a biomass boiler (briquettes and other waste) for hot water, laundry, cooking and sterilisation. Already a biomass buyer.",
+      "current_fuel": "Biomass boiler on briquettes/waste (commissioned 2023); diesel retired",
+      "signals": [
+        "award: National Energy Globe 2024; KAM Energy Awards 2025",
+        "already biomass: fuel supplier opening"
+      ],
+      "fit_score": 55,
+      "score_breakdown": {
+        "heat": 15,
+        "distance": 20,
+        "fossil": 0,
+        "scale": 15,
+        "signals": 5,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "high",
+      "suggested_angle": "Pitch seasoned wood or residue top-up and security of supply. See https://jocateorg.com/insights/supply-lines",
+      "next_step": "Look for the hospital's procurement page; request supplier registration details",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Abandons diesel for biomass; steam for water heating, laundry, cooking, sterilisation",
+          "url": "https://www.the-star.co.ke/news/2023-09-06-aga-khan-university-hospital-abandons-diesel-for-biomass",
+          "source": "The Star",
+          "date": "2023-09-06"
+        },
+        {
+          "claim": "Biomass project wins National Energy Globe Award",
+          "url": "https://africasolutionsmediahub.org/2024/12/24/aga-khan-university-hospital-nairobi-wins-national-energy-globe-award-for-biomass-project/",
+          "source": "Africa Solutions Media Hub",
+          "date": "2024-12-24"
+        },
+        {
+          "claim": "First runners up at 2025 KAM Energy Awards",
+          "url": "https://www.businessquest.co.ke/?p=82318",
+          "source": "Business Quest",
+          "date": "2025"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "gertrudes-childrens-hospital",
+      "company": "Gertrude's Children's Hospital",
+      "sector": "hospital",
+      "tier": "B",
+      "hotspot": "nairobi",
+      "sites": [
+        {
+          "town": "Nairobi",
+          "county": "Nairobi"
+        }
+      ],
+      "summary": "Nairobi hospital that replaced a diesel boiler with a biomass system operated by Lean Energy; fuel likely supplied through that operator.",
+      "current_fuel": "Biomass boiler operated by Lean Energy (replaced diesel)",
+      "signals": [],
+      "fit_score": 43,
+      "score_breakdown": {
+        "heat": 15,
+        "distance": 20,
+        "fossil": 0,
+        "scale": 8,
+        "signals": 0,
+        "access": 0
+      },
+      "band": "watch",
+      "confidence": "low",
+      "suggested_angle": "Probably supplied via the boiler operator; approach only as a second source. See https://jocateorg.com/insights/supply-lines",
+      "next_step": "Confirm contract structure; low priority",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Replaced diesel boiler with biomass system operated by Lean Energy",
+          "url": "https://capitalfm.africa/gertrudes-hospital-urges-health-facilities-to-make-sustainability-a-priority/",
+          "source": "Capital FM Africa",
+          "date": "undated"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    }
+  ]
 }

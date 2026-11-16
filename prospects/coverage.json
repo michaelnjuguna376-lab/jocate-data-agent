@@ -1,6 +1,6 @@
 {
-  "last_run": null,
-  "last_hotspots": [],
-  "last_sectors": [],
-  "per_hotspot": {}
+  "last_run": "2026-11-16",
+  "last_hotspots": ["nairobi", "thika-ruiru"],
+  "last_sectors": ["food-beverage", "paper-packaging", "hospitals"],
+  "per_hotspot": { "nairobi": 3, "thika-ruiru": 5 }
 }

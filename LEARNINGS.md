@@ -11,3 +11,9 @@ The agent appends one entry per run, newest at the bottom. Each entry covers wha
 - Observed: report 2026-W46 has 0 submissions (0 all-time); weekly ETL ran once on rules v1.0.0 with all-zero counts. No prior report to compare.
 - Changed: nothing; rules stay at v1.0.0 (no evidence).
 - Next: check for first real submissions, unmatched county/unit values, and the reject/flag rate.
+## 2026-11-16 Prospecting (2026-W47)
+- First run. Hotspots: nairobi, thika-ruiru. Sectors: food/beverage, paper/packaging, hospitals. Added 8 prospects (0 refreshed, pipeline was empty).
+- Worked: queries combining "biomass boiler" + company name; Unilever/AKUH/Kapa gave documented fuels. Company UNGC/sustainability reports are good fuel evidence.
+- Wasted time: page fetches were blocked by network policy (standardmedia, capitalfm, company sites), so everything rests on search summaries; most confidence is low. Aggregator tender searches returned only expired notices.
+- Insight: boiler-as-a-service (Lean Energy) is a competitor and channel; already-biomass users (Kapa, AKUH, Unilever boilers) are supply-side prospects.
+- Next week: nakuru-naivasha and athi-river; dairy, textiles, packaging; verify fuels for the low-confidence set; check the Nakuru dairy/juice plant sale.
