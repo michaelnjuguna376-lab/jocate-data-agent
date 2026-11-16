@@ -17,3 +17,9 @@ The agent appends one entry per run, newest at the bottom. Each entry covers wha
 - Wasted time: page fetches were blocked by network policy (standardmedia, capitalfm, company sites), so everything rests on search summaries; most confidence is low. Aggregator tender searches returned only expired notices.
 - Insight: boiler-as-a-service (Lean Energy) is a competitor and channel; already-biomass users (Kapa, AKUH, Unilever boilers) are supply-side prospects.
 - Next week: nakuru-naivasha and athi-river; dairy, textiles, packaging; verify fuels for the low-confidence set; check the Nakuru dairy/juice plant sale.
+
+## 2026-11-16 Prospecting (2026-W47, second run)
+- Hotspots: nakuru-naivasha, athi-river. Sectors: feed, food, edible oil, chemicals. Added 8 prospects, refreshed 6 (pipeline now 16).
+- Worked: "<town> factory expansion 2026" queries (De Heus, Crown Paints), NEMA ESIA PDFs and KDC pages as near-primary sources.
+- Wasted time: "<company> boiler fuel" queries returned nothing for Athi River and Nakuru firms; page fetches are still blocked, so 6 of 8 new prospects are low confidence and fuel is unverified.
+- Next week: central-tea-dairy and eldoret; check Ken Meat, KTDA tenders; verify fuels for low-confidence records once fetch access is allowed.

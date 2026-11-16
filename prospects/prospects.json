@@ -32,7 +32,7 @@
       "confidence": "low",
       "suggested_angle": "Steam fuel is unverified and a biogas plan may reduce demand; open by asking about boiler fuel and peak-season cover. See https://jocateorg.com/insights/fuel-shock-2026",
       "next_step": "Verify boiler fuel on company sustainability pages before approaching; then request a boiler review meeting",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "Del Monte Kenya unveiled a KES 516m frozen facility and 807 kW solar plant at Thika",
@@ -56,6 +56,12 @@
           "claim": "Aligns with UN global standards (sustainability)",
           "url": "https://africasustainabilitymatters.com/major-step-for-kenyan-agribusiness-del-monte-kenya-aligns-with-un-global-standards/",
           "source": "Africa Sustainability Matters",
+          "date": "undated"
+        },
+        {
+          "claim": "Biogas plant planned to meet 100% of energy via CHP (undated)",
+          "url": "https://www.bioenergy-news.com/news/biogas-plant-to-fulfil-100-of-del-montes-energy-needs/",
+          "source": "Bioenergy News",
           "date": "undated"
         }
       ],
@@ -94,7 +100,7 @@
       "confidence": "medium",
       "suggested_angle": "Next-phase hot-air switch is a live buying window; offer seasoned firewood or residue blends sized for a hot-air generator. See https://jocateorg.com/insights/fuel-shock-2026",
       "next_step": "Check the company's Kenya sustainability and supplier pages; request a fuel-supply conversation",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "Earlier HFO-to-biomass boiler switch plus solar cut Nairobi plant emissions about 40% vs 2023; next phase moves hot-air generation from HFO to biomass-based fuels",
@@ -149,7 +155,7 @@
       "confidence": "low",
       "suggested_angle": "Existing biomass user: pitch dependable macadamia shell and husk supply and seasoned wood as top-up. See https://jocateorg.com/insights/supply-lines",
       "next_step": "Confirm group relationship vs Edible Oil Refineries; find the public supplier page",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "22 TPH biomass boiler using agricultural waste; wood fuel use fell 3,889,000 kg in 2020 vs 2019",
@@ -199,7 +205,7 @@
       "confidence": "low",
       "suggested_angle": "Verify the plants' boiler fuel first; if fossil, lead with the heat-cost gap. See https://jocateorg.com/insights/fuel-shock-2026",
       "next_step": "Check recent news on plant upgrades and boiler fuel before approaching",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "Sh1bn expansion plan after Sh3bn DEG loan for equipment at Thika and Nairobi plants (undated, likely older than 24 months)",
@@ -239,7 +245,7 @@
       "confidence": "low",
       "suggested_angle": "Central dairy belt is close to supply; ask about current boiler fuel. See https://jocateorg.com/insights/supply-lines",
       "next_step": "Verify current boiler fuel and site list from company sources",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "Head office in Ruiru",
@@ -252,6 +258,12 @@
           "url": "https://www.slideshare.net/nayansavla/prefeasibility-dairystudy",
           "source": "SlideShare study",
           "date": "2013"
+        },
+        {
+          "claim": "Sustainability drive: regenerative farming, solar at cooling stations; no boiler detail",
+          "url": "https://www.thestandard.ke/business/business/article/2001528700/dairy-processor-ramps-up-sustainability-drive",
+          "source": "The Standard",
+          "date": "2025-09-05"
         }
       ],
       "first_seen": "2026-11-16",
@@ -285,7 +297,7 @@
       "confidence": "low",
       "suggested_angle": "Paper drying runs steam all day; verify boiler fuel and ask about the capacity upgrade. See https://jocateorg.com/insights/fuel-shock-2026",
       "next_step": "Find the upgrade date and boiler details on company or trade sources",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "Upgraded to 100 TPD (EAPML, Thika)",
@@ -387,6 +399,410 @@
           "url": "https://capitalfm.africa/gertrudes-hospital-urges-health-facilities-to-make-sustainability-a-priority/",
           "source": "Capital FM Africa",
           "date": "undated"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "de-heus-kenya",
+      "company": "De Heus Kenya",
+      "sector": "feed-milling",
+      "tier": "A",
+      "hotspot": "athi-river",
+      "sites": [
+        {
+          "town": "Athi River (Lukenya)",
+          "county": "Machakos"
+        }
+      ],
+      "website": "https://www.deheus.com",
+      "summary": "Dutch-owned animal-feed maker; new KSh3bn pellet feed mill in Athi River opened Feb 2026 (240,000 t/yr reported). Pellet conditioning needs steam.",
+      "current_fuel": "Unverified: sector norm is steam for pellet conditioning; no boiler or fuel disclosed",
+      "signals": [
+        "expansion: new mill opened 2026-02-18",
+        "peer switch: Unga (feed) moved to biomass Feb 2026"
+      ],
+      "fit_score": 75,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 15,
+        "signals": 5,
+        "access": 0
+      },
+      "band": "priority",
+      "confidence": "medium",
+      "suggested_angle": "New plant ramping up in 2026 with steam load and no disclosed fuel; Unga's feed-sector switch is the template. See https://jocateorg.com/insights/fuel-shock-2026",
+      "next_step": "Confirm the boiler fuel and who supplies it (ESIA/NEMA filing); request a boiler review meeting",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Opened a KSh3bn feed mill in Athi River on 2026-02-18, 240,000 t/yr",
+          "url": "https://www.deheus.com/articles/news/de-heus-kenya-opens-landmark-feed-mill-in-athi-river-boosting-agricultural-sector-and-regional-growth",
+          "source": "Company announcement",
+          "date": "2026-02"
+        },
+        {
+          "claim": "Largest pellet-making mill in region; no boiler or fuel mentioned",
+          "url": "https://allafrica.com/stories/202602060245.html",
+          "source": "AllAfrica",
+          "date": "2026-02-06"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "kenya-meat-commission",
+      "company": "Kenya Meat Commission",
+      "sector": "food",
+      "tier": "A",
+      "hotspot": "athi-river",
+      "sites": [
+        {
+          "town": "Athi River",
+          "county": "Machakos"
+        }
+      ],
+      "website": "https://www.kmc.co.ke",
+      "summary": "State meat processor with its main plant at Athi River; slaughter, chilling and processing use steam and hot water.",
+      "current_fuel": "Unverified: plant operations job advert asks for steam generation experience; fuel not stated",
+      "signals": [
+        "expansion: plans six more outlets in Mombasa and Nairobi (2025)",
+        "public-sector entity: formal procurement likely"
+      ],
+      "fit_score": 68,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 8,
+        "signals": 5,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "low",
+      "suggested_angle": "State-run plant with steam systems and no disclosed fuel; position seasoned firewood as a stable-price alternative to oil. See https://jocateorg.com/insights/fuel-shock-2026",
+      "next_step": "Verify boiler type and fuel from KMC annual report or tender notices; check KMC procurement page",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Main plant at Athi River; plans six more outlets in Mombasa and Nairobi",
+          "url": "https://www.standardmedia.co.ke/counties/article/2001528244/state-meat-agency-to-expand-mombasa-and-nairobi-branches",
+          "source": "The Standard",
+          "date": "2025-09"
+        },
+        {
+          "claim": "Plant operations manager role requires steam generation and distribution experience",
+          "url": "https://www.myjobmag.co.ke/job/manager-plant-operations-grade-kmc-3-1-post-kenya-meat-commission-1",
+          "source": "MyJobMag listing",
+          "date": "undated"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "menengai-oil-refineries",
+      "company": "Menengai Oil Refineries",
+      "sector": "edible-oil",
+      "tier": "A",
+      "hotspot": "nakuru-naivasha",
+      "sites": [
+        {
+          "town": "Nakuru",
+          "county": "Nakuru"
+        }
+      ],
+      "website": "",
+      "summary": "Nakuru maker of cooking oils, soaps and detergents (since 1988); refining and saponification are steam-heavy. In the Rift supply belt.",
+      "current_fuel": "Unverified: sector norm is oil- or biomass-fired steam; no boiler fuel found",
+      "signals": [
+        "energy-cost action: 850 kWp rooftop solar installed 2018"
+      ],
+      "fit_score": 70,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 15,
+        "signals": 0,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "low",
+      "suggested_angle": "Edible-oil refiner inside the Rift belt, so short-haul firewood; existing Jocate edible-oil clients prove the fit. See https://jocateorg.com/insights/supply-lines",
+      "next_step": "Verify boiler fuel (NEMA audit or annual report); find supplier-registration page",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Nakuru-based cooking oil, soap and detergent maker on Nakuru-Kisumu Road; 850 kWp solar in 2018",
+          "url": "https://www.premiersolargroup.com/project-details.php?id=1006",
+          "source": "Premier Solar project page",
+          "date": "2018"
+        },
+        {
+          "claim": "Company profile, founded 1988, Nakuru",
+          "url": "https://www.devex.com/organizations/menengai-oil-refineries-ltd-148021",
+          "source": "Devex",
+          "date": "undated"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "kenya-wine-agencies-kwal",
+      "company": "Kenya Wine Agencies Limited (KWAL)",
+      "sector": "brewing",
+      "tier": "A",
+      "hotspot": "thika-ruiru",
+      "sites": [
+        {
+          "town": "Tatu City, Ruiru",
+          "county": "Kiambu"
+        }
+      ],
+      "website": "",
+      "summary": "Spirits and wine blender and bottler (Heineken Beverages group) at Tatu City; distilling and bottling lines use steam.",
+      "current_fuel": "Unverified: job adverts seek certified boiler operators; fuel not stated",
+      "signals": [
+        "energy-cost action: solar plant commissioned Dec 2025",
+        "EDGE-certified facility (resource efficiency)"
+      ],
+      "fit_score": 68,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 8,
+        "signals": 5,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "low",
+      "suggested_angle": "Already acting on power costs; thermal fuel is the next lever. See https://jocateorg.com/insights/fuel-shock-2026",
+      "next_step": "Confirm boiler fuel; check supplier-registration page",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Commissioned a grid-tied solar plant at its Tatu City facility; facility holds EDGE certification",
+          "url": "https://standardmedia.co.ke/business/environment-climate/article/2001536214/kwal-banks-on-solar-power-to-expand-green-footprint-at-tatu-city",
+          "source": "The Standard",
+          "date": "2025-12-10"
+        },
+        {
+          "claim": "Utilities operator role lists certified boiler operator as advantage",
+          "url": "https://www.fuzu.com/kenya/jobs/utilities-operator-kenya-wine-agencies-ltd",
+          "source": "Fuzu job listing",
+          "date": "undated"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "timber-treatment-international-dandora",
+      "company": "Timber Treatment International (Dandora biomass steam plant, with KDC)",
+      "sector": "other",
+      "tier": "A",
+      "hotspot": "nairobi",
+      "sites": [
+        {
+          "town": "Dandora, Nairobi",
+          "county": "Nairobi"
+        }
+      ],
+      "website": "",
+      "summary": "Operator of a biomass steam plant in Dandora (with Kenya Development Corporation) selling steam to industrial users including New KCC. Buys agricultural and forestry residue as fuel.",
+      "current_fuel": "Biomass (agricultural and forestry residues) per KDC and press; supplier mix unknown",
+      "signals": [
+        "commissioned 2025-03-24",
+        "steam customer: New KCC (dairy)"
+      ],
+      "fit_score": 58,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 0,
+        "scale": 8,
+        "signals": 0,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "medium",
+      "suggested_angle": "Steam-as-a-service operator that must buy residues and wood reliably; a supply-side prospect. See https://jocateorg.com/insights/supply-lines",
+      "next_step": "Find out what residues it buys and its procurement route (KDC page); offer a trial delivery",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Biomass steam plant commissioned in Dandora 2025-03-24, supplies steam to New KCC",
+          "url": "https://kdc.go.ke/node/296",
+          "source": "KDC",
+          "date": "2025-03-24"
+        },
+        {
+          "claim": "KDC partners with Timber Treatment International to set up steam plant",
+          "url": "https://standardmedia.co.ke/amp/business/article/2001514766/kdc-partners-with-private-firm-to-set-up-steam-plant",
+          "source": "The Standard",
+          "date": "2025-03"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "kentegra-biotechnology",
+      "company": "Kentegra Biotechnology",
+      "sector": "other",
+      "tier": "B",
+      "hotspot": "nakuru-naivasha",
+      "sites": [
+        {
+          "town": "Naivasha / Gilgil",
+          "county": "Nakuru"
+        }
+      ],
+      "website": "",
+      "summary": "Pyrethrum processor building a new factory in Nakuru County and scaling output from 150 to 350 t/month. Extraction and drying may need heat (unverified); its pyrethrum marc residue is itself a biomass.",
+      "current_fuel": "Unverified: no boiler or fuel information found",
+      "signals": [
+        "expansion: new factory financed by DFC and Finnfund"
+      ],
+      "fit_score": 40,
+      "score_breakdown": {
+        "heat": 0,
+        "distance": 20,
+        "fossil": 0,
+        "scale": 15,
+        "signals": 5,
+        "access": 0
+      },
+      "band": "watch",
+      "confidence": "low",
+      "suggested_angle": "Large new plant in the Rift belt; ask about process-heat plans. See https://jocateorg.com/insights/supply-lines",
+      "next_step": "Verify heat load and fuel from its ESIA; sources conflict on Naivasha vs Gilgil site",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "New pyrethrum processing facility in Nakuru County financed by DFC",
+          "url": "https://www.dfc.gov/investment-story/revitalizing-kenyas-organic-pesticide-industry-and-improving-livelihoods",
+          "source": "DFC",
+          "date": "undated"
+        },
+        {
+          "claim": "Groundbreaking in Malewa West ward, Gilgil sub-county",
+          "url": "https://www.nakuru.go.ke/?p=16941",
+          "source": "Nakuru County",
+          "date": "undated"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "crystal-chillers-frozen-foods",
+      "company": "Crystal Chillers and Frozen Foods (Crystal Frozen & Chilled Foods SEZ Ltd)",
+      "sector": "food",
+      "tier": "A",
+      "hotspot": "nakuru-naivasha",
+      "sites": [
+        {
+          "town": "Naivasha SEZ",
+          "county": "Nakuru"
+        }
+      ],
+      "website": "",
+      "summary": "Frozen potato processing plant (KSh645m, about 1,000 t potatoes a month) at Naivasha SEZ; blanching and frying need steam. Operating status in 2026 unconfirmed.",
+      "current_fuel": "Unverified: sector norm is steam for blanching; no fuel disclosed",
+      "signals": [
+        "expansion: new plant, groundbreaking Aug 2024",
+        "SEZ licence incentives"
+      ],
+      "fit_score": 68,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 8,
+        "signals": 5,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "low",
+      "suggested_angle": "New plant inside the Rift belt, so supply is close. See https://jocateorg.com/insights/supply-lines",
+      "next_step": "Confirm if operating and its boiler fuel",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Construction of KSh645m frozen foods factory begins at Naivasha",
+          "url": "https://local.nation.co.ke/nakuru/business/construction-of-sh-645-million-frozen-foods-factory-begins-in-naivasha-4733890",
+          "source": "Nation",
+          "date": "2024-08"
+        },
+        {
+          "claim": "Listed among Naivasha SEZ projects; operation not confirmed",
+          "url": "https://allafrica.com/stories/202607290031.html",
+          "source": "AllAfrica",
+          "date": "2026-07-29"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "crown-paints-kenya",
+      "company": "Crown Paints Kenya PLC",
+      "sector": "chemicals",
+      "tier": "A",
+      "hotspot": "athi-river",
+      "sites": [
+        {
+          "town": "Lukenya, Athi River",
+          "county": "Machakos"
+        }
+      ],
+      "website": "https://www.crownpaints.co.ke",
+      "summary": "Listed paint maker planning an emulsion binder factory at Lukenya, replacing 600-700 t/month of imported binder. Binder reactors usually need heat (unverified).",
+      "current_fuel": "Unverified: no boiler or fuel disclosed in the ESIA coverage found",
+      "signals": [
+        "expansion: ESIA filed Dec 2025 for binder plant",
+        "record H1 2026 profit"
+      ],
+      "fit_score": 70,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 15,
+        "signals": 0,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "medium",
+      "suggested_angle": "Planned binder plant is a chance to specify biomass heat from day one. See https://jocateorg.com/insights/fuel-shock-2026",
+      "next_step": "Read ESIA for heating system; check supplier page",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "ESIA for emulsion paint binder factory at Lukenya (Dec 2025)",
+          "url": "https://nema.go.ke/wp-content/uploads/2026/03/ENVIS-00428-EIA-2439_GODOWNS-FOR-PROPOSED-EMULSION-PAINT-BINDER-FACTORY.pdf",
+          "source": "NEMA",
+          "date": "2025-12"
+        },
+        {
+          "claim": "Imports 600-700 t/month of binder; project cost reported KSh355m vs KSh141m",
+          "url": "https://khusoko.com/?p=53898",
+          "source": "Khusoko",
+          "date": "2026"
+        },
+        {
+          "claim": "H1 2026 net profit KSh486m",
+          "url": "https://kenyanwallstreet.com/crown-paints-kenya-h1-2026",
+          "source": "Kenyan Wall Street",
+          "date": "2026-08-17"
         }
       ],
       "first_seen": "2026-11-16",

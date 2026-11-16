@@ -1,6 +1,19 @@
 {
   "last_run": "2026-11-16",
-  "last_hotspots": ["nairobi", "thika-ruiru"],
-  "last_sectors": ["food-beverage", "paper-packaging", "hospitals"],
-  "per_hotspot": { "nairobi": 3, "thika-ruiru": 5 }
+  "last_hotspots": [
+    "nakuru-naivasha",
+    "athi-river"
+  ],
+  "last_sectors": [
+    "feed-milling",
+    "food",
+    "edible-oil",
+    "chemicals"
+  ],
+  "per_hotspot": {
+    "nairobi": 5,
+    "thika-ruiru": 5,
+    "athi-river": 3,
+    "nakuru-naivasha": 3
+  }
 }
