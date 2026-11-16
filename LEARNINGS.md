@@ -23,3 +23,10 @@ The agent appends one entry per run, newest at the bottom. Each entry covers wha
 - Worked: "<town> factory expansion 2026" queries (De Heus, Crown Paints), NEMA ESIA PDFs and KDC pages as near-primary sources.
 - Wasted time: "<company> boiler fuel" queries returned nothing for Athi River and Nakuru firms; page fetches are still blocked, so 6 of 8 new prospects are low confidence and fuel is unverified.
 - Next week: central-tea-dairy and eldoret; check Ken Meat, KTDA tenders; verify fuels for low-confidence records once fetch access is allowed.
+
+## 2026-11-16 Prospecting (2026-W47, third run)
+- Hotspots: central-tea-dairy, eldoret. Sectors: dairy, tea, textiles, hospitals (+ Nakuru beverage follow-up). Added 7 prospects, refreshed 7, closed 1 (Gertrude's: biomass run by Lean Energy). Pipeline now 23.
+- Worked: acquisition news (VBL/Varun bought the Nakuru plant with a listed boiler), dairy trade sites (Dairy Business MEA, FoodBev) with dates, KTDA tenders page for the firewood-tender check.
+- Wasted time: "<company> boiler" queries for dairies, tea factories and Eldoret firms returned nothing; Nation and Kenyan Wall Street fetches give 403; Business Daily dairy pages are old (2011, 2015).
+- Insight: KTDA tea factories are shifting to electricity, briquettes and gasification, so tea firewood demand is shrinking; dairies and beverage plants are the better Tier A targets.
+- Next week: kericho-tea and limuru; verify fuel for VBL, Meru Dairy, New KCC; refresh Kentegra, Crystal Chillers, Kevian, Brookside, EAPM.

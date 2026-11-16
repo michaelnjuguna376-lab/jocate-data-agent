@@ -63,6 +63,12 @@
           "url": "https://www.bioenergy-news.com/news/biogas-plant-to-fulfil-100-of-del-montes-energy-needs/",
           "source": "Bioenergy News",
           "date": "undated"
+        },
+        {
+          "claim": "Biogas CHP plant at Thika farm (Sh963.4m, Pinepower builder) still undated; no 2026 boiler news",
+          "url": "https://www.bioenergy-news.com/news/biogas-plant-to-fulfil-100-of-del-montes-energy-needs/",
+          "source": "Bioenergy News",
+          "date": "undated"
         }
       ],
       "first_seen": "2026-11-16",
@@ -340,7 +346,7 @@
       "confidence": "high",
       "suggested_angle": "Pitch seasoned wood or residue top-up and security of supply. See https://jocateorg.com/insights/supply-lines",
       "next_step": "Look for the hospital's procurement page; request supplier registration details",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "Abandons diesel for biomass; steam for water heating, laundry, cooking, sterilisation",
@@ -391,8 +397,8 @@
       "band": "watch",
       "confidence": "low",
       "suggested_angle": "Probably supplied via the boiler operator; approach only as a second source. See https://jocateorg.com/insights/supply-lines",
-      "next_step": "Confirm contract structure; low priority",
-      "research_status": "new",
+      "next_step": "Closed: biomass system already run by Lean Energy under its operator model; revisit only if the contract ends",
+      "research_status": "closed",
       "evidence": [
         {
           "claim": "Replaced diesel boiler with biomass system operated by Lean Energy",
@@ -436,7 +442,7 @@
       "confidence": "medium",
       "suggested_angle": "New plant ramping up in 2026 with steam load and no disclosed fuel; Unga's feed-sector switch is the template. See https://jocateorg.com/insights/fuel-shock-2026",
       "next_step": "Confirm the boiler fuel and who supplies it (ESIA/NEMA filing); request a boiler review meeting",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "Opened a KSh3bn feed mill in Athi River on 2026-02-18, 240,000 t/yr",
@@ -486,7 +492,7 @@
       "confidence": "low",
       "suggested_angle": "State-run plant with steam systems and no disclosed fuel; position seasoned firewood as a stable-price alternative to oil. See https://jocateorg.com/insights/fuel-shock-2026",
       "next_step": "Verify boiler type and fuel from KMC annual report or tender notices; check KMC procurement page",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "Main plant at Athi River; plans six more outlets in Mombasa and Nairobi",
@@ -535,7 +541,7 @@
       "confidence": "low",
       "suggested_angle": "Edible-oil refiner inside the Rift belt, so short-haul firewood; existing Jocate edible-oil clients prove the fit. See https://jocateorg.com/insights/supply-lines",
       "next_step": "Verify boiler fuel (NEMA audit or annual report); find supplier-registration page",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "Nakuru-based cooking oil, soap and detergent maker on Nakuru-Kisumu Road; 850 kWp solar in 2018",
@@ -569,8 +575,8 @@
       "summary": "Spirits and wine blender and bottler (Heineken Beverages group) at Tatu City; distilling and bottling lines use steam.",
       "current_fuel": "Unverified: job adverts seek certified boiler operators; fuel not stated",
       "signals": [
-        "energy-cost action: solar plant commissioned Dec 2025",
-        "EDGE-certified facility (resource efficiency)"
+        "energy-cost action: solar plant commissioned Dec 2025, expansion planned",
+        "EDGE Advanced certification (Aug 2026): 44% less energy use"
       ],
       "fit_score": 68,
       "score_breakdown": {
@@ -585,7 +591,7 @@
       "confidence": "low",
       "suggested_angle": "Already acting on power costs; thermal fuel is the next lever. See https://jocateorg.com/insights/fuel-shock-2026",
       "next_step": "Confirm boiler fuel; check supplier-registration page",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "Commissioned a grid-tied solar plant at its Tatu City facility; facility holds EDGE certification",
@@ -598,6 +604,12 @@
           "url": "https://www.fuzu.com/kenya/jobs/utilities-operator-kenya-wine-agencies-ltd",
           "source": "Fuzu job listing",
           "date": "undated"
+        },
+        {
+          "claim": "First Kenyan manufacturer with EDGE Advanced certification; reported 44% energy cut (Aug 2026)",
+          "url": "https://www.foodbusinessmea.com/kwal-becomes-kenyas-first-manufacturer-to-earn-edge-advanced-certification/",
+          "source": "Food Business MEA",
+          "date": "2026-08-26"
         }
       ],
       "first_seen": "2026-11-16",
@@ -803,6 +815,366 @@
           "url": "https://kenyanwallstreet.com/crown-paints-kenya-h1-2026",
           "source": "Kenyan Wall Street",
           "date": "2026-08-17"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "vbl-industries-kenya-nakuru",
+      "company": "VBL Industries (Kenya) Limited (Varun Beverages; former Devyani Food Industries Kenya plant)",
+      "sector": "food",
+      "tier": "A",
+      "hotspot": "nakuru-naivasha",
+      "sites": [
+        {
+          "town": "Nakuru",
+          "county": "Nakuru"
+        }
+      ],
+      "website": "",
+      "summary": "Varun Beverages subsidiary acquiring the Nakuru beverage plant (dairy beverages, juices, water) with a documented boiler; new owner is expected to scale output.",
+      "current_fuel": "Boiler on site (fuel not stated); unverified whether oil-fired",
+      "signals": [
+        "expansion: new owner, USD 32m acquisition (Jul 2026)",
+        "boiler documented in plant asset list"
+      ],
+      "fit_score": 75,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 15,
+        "signals": 5,
+        "access": 0
+      },
+      "band": "priority",
+      "confidence": "medium",
+      "suggested_angle": "New owner reviewing plant costs; open with a steam-cost comparison and short-haul Rift supply. See https://jocateorg.com/insights/fuel-shock-2026",
+      "next_step": "Confirm boiler fuel and who runs the boiler; check VBL supplier-registration page once completion is confirmed",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "VBL Industries (Kenya) to acquire Devyani Food Industries Kenya beverage business; 52-acre Nakuru plant includes a boiler, RO plant, ETP, generator; USD 32m; closing on or before 1 Aug 2026",
+          "url": "https://www.foodbev.com/news/varun-beverages-expands-east-africa-footprint-with-32m-kenya-beverage-business-acquisition",
+          "source": "FoodBev Media",
+          "date": "2026-07-08"
+        },
+        {
+          "claim": "Varun Beverages acquires Kenyan firm for Sh4.8bn (headline and date only; body not readable)",
+          "url": "https://standardmedia.co.ke/business/amp/financial-standard/article/2001552722/beverage-price-wars-loom-as-indian-billionaire-acquires-kenyan-firm-for-sh48b",
+          "source": "The Standard",
+          "date": "2026-07-14"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "meru-central-dairy-cooperative-union",
+      "company": "Meru Central Dairy Cooperative Union",
+      "sector": "dairy",
+      "tier": "A",
+      "hotspot": "central-tea-dairy",
+      "sites": [
+        {
+          "town": "Meru",
+          "county": "Meru"
+        }
+      ],
+      "website": "",
+      "summary": "Farmer-owned processor of fresh milk, UHT, butter, ghee and fermented milk; about 640,000-670,000 litres a day from 160,000+ farmers, so steady pasteurising, UHT and CIP steam load.",
+      "current_fuel": "Unverified: sector norm is oil- or wood-fired steam; no boiler data found",
+      "signals": [
+        "growth: milk intake up from 287,000 to 670,000 L/day in 13 years",
+        "new Maziwa Millers feed plant at Mitunguu (second line and drying planned)"
+      ],
+      "fit_score": 75,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 15,
+        "signals": 5,
+        "access": 0
+      },
+      "band": "priority",
+      "confidence": "medium",
+      "suggested_angle": "Intake is rising towards plant capacity (720,000 L/day): ask about boiler fuel and peak cover. See https://jocateorg.com/insights/fuel-shock-2026",
+      "next_step": "Find boiler fuel and any public tender page; request a boiler review meeting",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Union has 160,000+ farmers and about 670,000 L of milk a day; government supplied 15 coolers",
+          "url": "https://www.the-star.co.ke/news/star-farmer/2026-07-27-how-government-measures-are-transforming-dairy-farming-in-meru",
+          "source": "The Star",
+          "date": "2026-07-27"
+        },
+        {
+          "claim": "28-fold expansion in 13 years; intake 287,000 to 670,000 L; Maziwa Millers feed plant at Mitunguu with later drying facilities",
+          "url": "https://dairybusinessmea.com/2026/08/19/meru-central-dairy-cooperative-union-records-28-fold-growth-expansion/",
+          "source": "Dairy Business MEA",
+          "date": "2026-08-19"
+        },
+        {
+          "claim": "Processing plant capacity 720,000 L/day (CEO); product range includes UHT, butter, ghee, cream",
+          "url": "https://www.kenyanews.go.ke/?p=176953",
+          "source": "Kenya News Agency (search summary)",
+          "date": "undated"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "new-kcc-kiganjo-eldoret",
+      "company": "New Kenya Cooperative Creameries (New KCC)",
+      "sector": "dairy",
+      "tier": "A",
+      "hotspot": "central-tea-dairy",
+      "sites": [
+        {
+          "town": "Kiganjo (Nyeri)",
+          "county": "Nyeri"
+        },
+        {
+          "town": "Eldoret",
+          "county": "Uasin Gishu"
+        }
+      ],
+      "website": "https://www.newkcc.co.ke",
+      "summary": "National dairy processor with plants including Kiganjo (milk powder, camel milk powder, bottled water) and Eldoret (UHT); drying and UHT need large steam loads.",
+      "current_fuel": "Unverified: no boiler or fuel data found",
+      "signals": [
+        "expansion: Kiganjo factory modernised Aug 2023, further programme ongoing",
+        "state funding of Sh8bn over three years (Nation, Oct 2026 per search summary)"
+      ],
+      "fit_score": 75,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 15,
+        "signals": 5,
+        "access": 0
+      },
+      "band": "priority",
+      "confidence": "medium",
+      "suggested_angle": "Powder drying runs on steam all day; offer a fuel-security and cost comparison. See https://jocateorg.com/insights/fuel-shock-2026",
+      "next_step": "Find the procurement or supplier page; confirm boiler fuel per plant",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Kiganjo factory modernised: machinery for camel and cow milk powder, bottling plant; ongoing expansion programme",
+          "url": "https://www.newkcc.co.ke/commissioning-of-the-newly-modernised-kiganjo-factory-by-h-e-president-dr-william-ruto/",
+          "source": "New KCC website",
+          "date": "2023-08-08"
+        },
+        {
+          "claim": "Eldoret plant installing UHT facility; Kiganjo upgraded for long-life products (dated; context only)",
+          "url": "https://www.businessdailyafrica.com/bd/markets/new-kcc-upgrades-long-life-milk-plants-to-cash-in-on-market-glut-2100356",
+          "source": "Business Daily",
+          "date": "2015-11-04"
+        },
+        {
+          "claim": "Government has put Sh8bn into New KCC over three years; plan to decentralise (search summary, page not read)",
+          "url": "https://www.nation.africa/kenya/news/politics/ruto-s-dairy-promise-sh65-milk-and-farmer-owned-new-kcc-5637000",
+          "source": "Nation",
+          "date": "2026-10"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "githunguri-dairy",
+      "company": "Githunguri Dairy Farmers Cooperative Society",
+      "sector": "dairy",
+      "tier": "A",
+      "hotspot": "thika-ruiru",
+      "sites": [
+        {
+          "town": "Githunguri",
+          "county": "Kiambu"
+        }
+      ],
+      "website": "",
+      "summary": "Third-largest dairy processor in Kenya by one report; Fresha milk, UHT plant (7,200 L/h), yoghurt, butter and exports; pasteurising and UHT need steam.",
+      "current_fuel": "Unverified: no boiler data found",
+      "signals": [],
+      "fit_score": 70,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 15,
+        "signals": 0,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "low",
+      "suggested_angle": "Short haul from the Central belt; open by asking about boiler fuel. See https://jocateorg.com/insights/supply-lines",
+      "next_step": "Verify current capacity and boiler fuel from a recent source before approaching",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "UHT plant 7,200 L/h (Sh135m); daily processing grew from 5,000 to 200,000 L; target 300,000 L (article 2011, updated 2020)",
+          "url": "https://www.businessdailyafrica.com/bd/markets/githunguri-dairy-takes-turf-wars-to-eac-1979858",
+          "source": "Business Daily",
+          "date": "2020-12-25"
+        },
+        {
+          "claim": "Export deal for UHT milk; described as Kenya's third-largest dairy processor (undated)",
+          "url": "https://www.foodbusinessmea.com/?p=2107879",
+          "source": "Food Business MEA",
+          "date": "undated"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "rivatex-east-africa-eldoret",
+      "company": "Rivatex East Africa Limited",
+      "sector": "textiles",
+      "tier": "A",
+      "hotspot": "eldoret",
+      "sites": [
+        {
+          "town": "Eldoret",
+          "county": "Uasin Gishu"
+        }
+      ],
+      "website": "",
+      "summary": "Eldoret textile mill modernised with about Sh5bn (2019), capacity 40 t of cotton a day; textile finishing normally needs process steam. Ownership change reported but not confirmed.",
+      "current_fuel": "Unverified: no boiler data found",
+      "signals": [],
+      "fit_score": 63,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 8,
+        "signals": 0,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "low",
+      "suggested_angle": "In the Uasin Gishu plantation belt, so a short haul; open by asking about steam and fuel. See https://jocateorg.com/insights/supply-lines",
+      "next_step": "Confirm current owner (a search summary says a 21-year lease to a private investor) and whether the plant is running at scale",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Sh5bn upgrade; plant can handle 40 t cotton a day; Moi University operating it (2019)",
+          "url": "https://standardmedia.co.ke/business/amp/news/article/2001328472/rivatex-roars-back-to-life-after-sh5-billion-upgrade",
+          "source": "The Standard",
+          "date": "2019-06-05"
+        },
+        {
+          "claim": "Government leased Rivatex to a private investor for 21 years (search summary only, unverified)",
+          "url": "https://kenyanwallstreet.com/donors-govt-of-india-to-invest-over-kes-4-billion-in-rift-valley-textile",
+          "source": "Kenyan Wall Street",
+          "date": "undated"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "moi-teaching-referral-hospital-eldoret",
+      "company": "Moi Teaching and Referral Hospital (MTRH)",
+      "sector": "hospital",
+      "tier": "B",
+      "hotspot": "eldoret",
+      "sites": [
+        {
+          "town": "Eldoret",
+          "county": "Uasin Gishu"
+        }
+      ],
+      "website": "https://www.mtrh.go.ke",
+      "summary": "National referral hospital in Eldoret; laundry, kitchens and sterilisation usually run on steam.",
+      "current_fuel": "Unverified: no boiler fuel found",
+      "signals": [
+        "publishes public tender notices"
+      ],
+      "fit_score": 60,
+      "score_breakdown": {
+        "heat": 15,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 15,
+        "signals": 0,
+        "access": 5
+      },
+      "band": "strong",
+      "confidence": "low",
+      "suggested_angle": "Peer hospital Aga Khan Nairobi cut 860,000 L of diesel a year with biomass. See https://jocateorg.com/insights/fuel-shock-2026",
+      "next_step": "Find the facilities or engineering tender page and the boiler fuel",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "MTRH publishes tender notices (supplier access route)",
+          "url": "https://gaa.go.ke/sites/default/files/2024-11/Moi%20Teaching%20and%20Referral%20Hospital%20%28MTRH%29%20Tender%20Notices.pdf",
+          "source": "Government Advertising Agency",
+          "date": "2024-11"
+        },
+        {
+          "claim": "Peer: Aga Khan University Hospital cut diesel use by about 860,000 L a year with biomass",
+          "url": "https://www.the-star.co.ke/news/2023-09-06-aga-khan-university-hospital-abandons-diesel-for-biomass",
+          "source": "The Star",
+          "date": "2023-09-06"
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "chinga-tea-factory-nyeri",
+      "company": "Chinga Tea Factory Company (KTDA-managed)",
+      "sector": "tea",
+      "tier": "A",
+      "hotspot": "central-tea-dairy",
+      "sites": [
+        {
+          "town": "Othaya",
+          "county": "Nyeri"
+        }
+      ],
+      "website": "",
+      "procurement_url": "https://ktdateas.com/category/tenders/",
+      "summary": "Smallholder tea factory in Othaya, Nyeri; wood-fired boiler pictured in a 2023 report, so already a firewood user. KTDA-managed factories are moving to electricity, briquettes and gasification, which could shrink firewood demand.",
+      "current_fuel": "Wood-fired boiler (Standard photo caption, Jan 2023); current status unverified",
+      "signals": [
+        "risk: KTDA factories selling woodlots after shifting to own electricity",
+        "KTDA-UNIDO gasification research (Feb 2026, search summary)"
+      ],
+      "fit_score": 63,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 0,
+        "scale": 8,
+        "signals": 0,
+        "access": 5
+      },
+      "band": "strong",
+      "confidence": "low",
+      "suggested_angle": "Reliable seasoned supply and co-firing with briquettes. See https://jocateorg.com/insights/supply-lines",
+      "next_step": "Check KTDA tender pages for wood-fuel supply and confirm current boiler fuel",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Worker feeds wood into Chinga Tea Factory boiler; factories seeking to sell woodlots",
+          "url": "https://www.standardmedia.co.ke/business/article/2001464575/tea-factories-seek-to-sell-idle-land-bought-to-grow-trees-for-firewood",
+          "source": "The Standard",
+          "date": "2023-01-06"
+        },
+        {
+          "claim": "KTDA tenders page shows supply tenders but no firewood notice in Oct 2026 listings",
+          "url": "https://ktdateas.com/category/tenders/",
+          "source": "KTDA",
+          "date": "2026-10-29"
         }
       ],
       "first_seen": "2026-11-16",
