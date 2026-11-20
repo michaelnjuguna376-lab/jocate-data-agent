@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-20",
   "prospects": [
     {
       "id": "del-monte-kenya",
@@ -69,10 +69,16 @@
           "url": "https://www.bioenergy-news.com/news/biogas-plant-to-fulfil-100-of-del-montes-energy-needs/",
           "source": "Bioenergy News",
           "date": "undated"
+        },
+        {
+          "claim": "807 kW solar plant commissioned for canning, frozen, beverage and concentrate lines; no boiler news",
+          "url": "https://kenyanwallstreet.com/del-monte-kenya-goes-green-with-new-solar-installation-supporting-pineapple-operations",
+          "source": "Kenyan Wall Street (search summary)",
+          "date": "2026-07-26"
         }
       ],
       "first_seen": "2026-11-16",
-      "last_reviewed": "2026-11-16"
+      "last_reviewed": "2026-11-20"
     },
     {
       "id": "unilever-kenya-nairobi",
@@ -221,7 +227,7 @@
         }
       ],
       "first_seen": "2026-11-16",
-      "last_reviewed": "2026-11-16"
+      "last_reviewed": "2026-11-20"
     },
     {
       "id": "brookside-dairy",
@@ -270,10 +276,16 @@
           "url": "https://www.thestandard.ke/business/business/article/2001528700/dairy-processor-ramps-up-sustainability-drive",
           "source": "The Standard",
           "date": "2025-09-05"
+        },
+        {
+          "claim": "Brookside deepens hotel and caterer partnerships; no boiler news",
+          "url": "https://dairybusinessmea.com/2026/06/29/brookside-dairy-deepens-partnership-with-kenyas-hospitality-sector/",
+          "source": "Dairy Business MEA",
+          "date": "2026-06-29"
         }
       ],
       "first_seen": "2026-11-16",
-      "last_reviewed": "2026-11-16"
+      "last_reviewed": "2026-11-20"
     },
     {
       "id": "east-african-paper-mills",
@@ -313,7 +325,7 @@
         }
       ],
       "first_seen": "2026-11-16",
-      "last_reviewed": "2026-11-16"
+      "last_reviewed": "2026-11-20"
     },
     {
       "id": "aga-khan-university-hospital-nairobi",
@@ -455,10 +467,16 @@
           "url": "https://allafrica.com/stories/202602060245.html",
           "source": "AllAfrica",
           "date": "2026-02-06"
+        },
+        {
+          "claim": "Athi River mill opened 18 Feb 2026: KSh3bn, 240,000 t/yr, 280 direct jobs; no boiler mention",
+          "url": "https://allafrica.com/stories/202602060245.html",
+          "source": "allAfrica",
+          "date": "2026-02-06"
         }
       ],
       "first_seen": "2026-11-16",
-      "last_reviewed": "2026-11-16"
+      "last_reviewed": "2026-11-20"
     },
     {
       "id": "kenya-meat-commission",
@@ -696,7 +714,7 @@
       "confidence": "low",
       "suggested_angle": "Large new plant in the Rift belt; ask about process-heat plans. See https://jocateorg.com/insights/supply-lines",
       "next_step": "Verify heat load and fuel from its ESIA; sources conflict on Naivasha vs Gilgil site",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "New pyrethrum processing facility in Nakuru County financed by DFC",
@@ -712,7 +730,7 @@
         }
       ],
       "first_seen": "2026-11-16",
-      "last_reviewed": "2026-11-16"
+      "last_reviewed": "2026-11-20"
     },
     {
       "id": "crystal-chillers-frozen-foods",
@@ -746,7 +764,7 @@
       "confidence": "low",
       "suggested_angle": "New plant inside the Rift belt, so supply is close. See https://jocateorg.com/insights/supply-lines",
       "next_step": "Confirm if operating and its boiler fuel",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "Construction of KSh645m frozen foods factory begins at Naivasha",
@@ -762,7 +780,7 @@
         }
       ],
       "first_seen": "2026-11-16",
-      "last_reviewed": "2026-11-16"
+      "last_reviewed": "2026-11-20"
     },
     {
       "id": "crown-paints-kenya",
@@ -837,7 +855,8 @@
       "current_fuel": "Boiler on site (fuel not stated); unverified whether oil-fired",
       "signals": [
         "expansion: new owner, USD 32m acquisition (Jul 2026)",
-        "boiler documented in plant asset list"
+        "boiler documented in plant asset list",
+        "expansion: Nakuru plant to add soft-drink lines (FoodBev, Jul 2026)"
       ],
       "fit_score": 75,
       "score_breakdown": {
@@ -852,7 +871,7 @@
       "confidence": "medium",
       "suggested_angle": "New owner reviewing plant costs; open with a steam-cost comparison and short-haul Rift supply. See https://jocateorg.com/insights/fuel-shock-2026",
       "next_step": "Confirm boiler fuel and who runs the boiler; check VBL supplier-registration page once completion is confirmed",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "VBL Industries (Kenya) to acquire Devyani Food Industries Kenya beverage business; 52-acre Nakuru plant includes a boiler, RO plant, ETP, generator; USD 32m; closing on or before 1 Aug 2026",
@@ -865,10 +884,16 @@
           "url": "https://standardmedia.co.ke/business/amp/financial-standard/article/2001552722/beverage-price-wars-loom-as-indian-billionaire-acquires-kenyan-firm-for-sh48b",
           "source": "The Standard",
           "date": "2026-07-14"
+        },
+        {
+          "claim": "Nakuru plant (dairy beverages, juices, water) to be expanded to carbonated soft drink lines; greenfield Kenya plant targeted Q4 2027; closing not yet confirmed in sources found",
+          "url": "https://www.foodbev.com/news/varun-beverages-expands-east-africa-footprint-with-32m-kenya-beverage-business-acquisition",
+          "source": "FoodBev Media",
+          "date": "2026-07-08"
         }
       ],
       "first_seen": "2026-11-16",
-      "last_reviewed": "2026-11-16"
+      "last_reviewed": "2026-11-20"
     },
     {
       "id": "meru-central-dairy-cooperative-union",
@@ -902,7 +927,7 @@
       "confidence": "medium",
       "suggested_angle": "Intake is rising towards plant capacity (720,000 L/day): ask about boiler fuel and peak cover. See https://jocateorg.com/insights/fuel-shock-2026",
       "next_step": "Find boiler fuel and any public tender page; request a boiler review meeting",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "Union has 160,000+ farmers and about 670,000 L of milk a day; government supplied 15 coolers",
@@ -924,7 +949,7 @@
         }
       ],
       "first_seen": "2026-11-16",
-      "last_reviewed": "2026-11-16"
+      "last_reviewed": "2026-11-20"
     },
     {
       "id": "new-kcc-kiganjo-eldoret",
@@ -962,7 +987,7 @@
       "confidence": "medium",
       "suggested_angle": "Powder drying runs on steam all day; offer a fuel-security and cost comparison. See https://jocateorg.com/insights/fuel-shock-2026",
       "next_step": "Find the procurement or supplier page; confirm boiler fuel per plant",
-      "research_status": "new",
+      "research_status": "refreshed",
       "evidence": [
         {
           "claim": "Kiganjo factory modernised: machinery for camel and cow milk powder, bottling plant; ongoing expansion programme",
@@ -984,7 +1009,7 @@
         }
       ],
       "first_seen": "2026-11-16",
-      "last_reviewed": "2026-11-16"
+      "last_reviewed": "2026-11-20"
     },
     {
       "id": "githunguri-dairy",
@@ -1179,6 +1204,235 @@
       ],
       "first_seen": "2026-11-16",
       "last_reviewed": "2026-11-16"
+    },
+    {
+      "id": "browns-plantations-kenya",
+      "company": "Browns Plantations Kenya Limited",
+      "sector": "tea",
+      "tier": "A",
+      "hotspot": "kericho-tea",
+      "sites": [
+        {
+          "town": "Changana, Kitumbe, Kimugu (Kericho and Bomet)",
+          "county": "Kericho"
+        }
+      ],
+      "website": "",
+      "summary": "Tea producer running four factories across Kericho and Bomet; added a hybrid CTC/Orthodox line at Changana (about 3M kg a year) and is commissioning another at Kimugu in November 2026, so thermal load is rising.",
+      "current_fuel": "Unverified: sector norm is wood-fired tea driers; article does not mention fuel",
+      "signals": [
+        "expansion: Changana line commissioned, Kimugu line due Nov 2026",
+        "gasification pilot reported at a Browns factory in Kericho (search summary, undated)"
+      ],
+      "fit_score": 70,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 0,
+        "scale": 15,
+        "signals": 5,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "medium",
+      "suggested_angle": "More drying capacity means more firewood: seasoned, plantation-backed supply and co-firing. See https://jocateorg.com/insights/supply-lines",
+      "next_step": "Confirm current boiler fuel and wood sourcing for Changana and Kimugu; find the company procurement contact page",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Four tea factories in Kericho and Bomet; new Changana line adds about 3M kg a year; Kimugu Orthodox line installation began Feb 2026, commissioning Nov 2026",
+          "url": "https://www.foodbusinessmea.com/?p=2165378",
+          "source": "Food Business MEA",
+          "date": "2026-11-05"
+        }
+      ],
+      "first_seen": "2026-11-20",
+      "last_reviewed": "2026-11-20"
+    },
+    {
+      "id": "nandi-cooperative-creameries-kabiyet",
+      "company": "Nandi Cooperative Creameries (Kabiyet milk processing plant)",
+      "sector": "dairy",
+      "tier": "A",
+      "hotspot": "kericho-tea",
+      "sites": [
+        {
+          "town": "Kabiyet, Mosop",
+          "county": "Nandi"
+        }
+      ],
+      "website": "",
+      "summary": "County-owned plant commissioned in May 2025 with a UHT line, designed for over 200,000 L of milk a day; UHT and pasteurising need steady steam.",
+      "current_fuel": "Unverified: sector norm is steam for UHT; boiler not described in any source found",
+      "signals": [
+        "new plant commissioned May 2025 (USD 9.27M, World Bank partnership)",
+        "capacity design over 200,000 L/day"
+      ],
+      "fit_score": 68,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 8,
+        "signals": 5,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "medium",
+      "suggested_angle": "New county plant with no legacy boiler contract: pitch steam cost per tonne of milk. See https://jocateorg.com/insights/fuel-shock-2026",
+      "next_step": "Confirm boiler type and fuel; check Nandi County and World Bank procurement pages for fuel supply",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Kabiyet plant, Nandi County: USD 9.27M, UHT line operational, expected over 200,000 L/day; Nandi County with World Bank",
+          "url": "https://dairybusinessmea.com/2025/05/24/nandi-county-unveils-its-us9-27m-kabiyet-milk-processing-plant/",
+          "source": "Dairy Business MEA",
+          "date": "2025-05-24"
+        },
+        {
+          "claim": "Plant installation 80 percent complete, over 200,000 L/day expected (earlier status)",
+          "url": "https://www.kenyanews.go.ke/nandi-dairy-plant-nears-completion/",
+          "source": "Kenya News Agency",
+          "date": "2023-10-31"
+        }
+      ],
+      "first_seen": "2026-11-20",
+      "last_reviewed": "2026-11-20"
+    },
+    {
+      "id": "proctor-allan-east-africa-limuru",
+      "company": "Proctor & Allan East Africa Limited",
+      "sector": "food",
+      "tier": "A",
+      "hotspot": "limuru",
+      "sites": [
+        {
+          "town": "Limuru",
+          "county": "Kiambu"
+        }
+      ],
+      "website": "",
+      "summary": "Limuru breakfast-cereal, oats and fortified-flour factory; cooking and drying lines normally need steam or hot air. Only a 2017 source found, so verify it is still operating at that scale.",
+      "current_fuel": "Unverified: sector norm is steam or thermal oil for cooking and drying; no energy mention in sources",
+      "signals": [
+        "Sh2bn Limuru factory completed (2017, old)"
+      ],
+      "fit_score": 63,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 5,
+        "scale": 8,
+        "signals": 0,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "low",
+      "suggested_angle": "Limuru is about 60 km from the Central belt: short-haul seasoned wood. See https://jocateorg.com/insights/supply-lines",
+      "next_step": "Verify current operations, capacity and boiler fuel with a recent source before approaching",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Sh2bn factory in Limuru making breakfast cereals, oats and pre-cooked fortified flour (article paywalled beyond lead)",
+          "url": "https://standardmedia.co.ke/business/article/2001254739/proctor-east-africa-targets-bigger-breakfast-stake-with-sh2-billion-factory",
+          "source": "The Standard",
+          "date": "2017-09-17"
+        }
+      ],
+      "first_seen": "2026-11-20",
+      "last_reviewed": "2026-11-20"
+    },
+    {
+      "id": "chebango-tea-factory-bomet",
+      "company": "Chebango Tea Factory",
+      "sector": "tea",
+      "tier": "A",
+      "hotspot": "kericho-tea",
+      "sites": [
+        {
+          "town": "Sotik (Bomet-Sotik highway)",
+          "county": "Bomet"
+        }
+      ],
+      "website": "",
+      "summary": "Newer Bomet tea factory with a boiler operator and a wood fuel department, so already a firewood buyer; check whether it is KTDA-managed or independent.",
+      "current_fuel": "Wood-fired boiler implied by wood fuel department and boiler operator roles (job adverts dated 2017; unverified today)",
+      "signals": [
+        "wood fuel department advertised (2017)"
+      ],
+      "fit_score": 58,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 0,
+        "scale": 8,
+        "signals": 0,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "low",
+      "suggested_angle": "Reliable seasoned wood and co-firing for a factory that already runs a wood fuel desk. See https://jocateorg.com/insights/supply-lines",
+      "next_step": "Confirm ownership, current wood supply arrangements and any tender page",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Boiler Operator and Wood Fuel Officer roles; factory on the Bomet-Sotik highway (vacancies dated 25 Feb 2017; page copyright 2026)",
+          "url": "https://www.myjobmag.co.ke/jobs-at/chebango-tea-factory",
+          "source": "MyJobMag job listing",
+          "date": "2017-02-25"
+        }
+      ],
+      "first_seen": "2026-11-20",
+      "last_reviewed": "2026-11-20"
+    },
+    {
+      "id": "west-valley-sugar-kericho",
+      "company": "West Valley Sugar Company (Kipchimchim Group)",
+      "sector": "sugar",
+      "tier": "A",
+      "hotspot": "kericho-tea",
+      "sites": [
+        {
+          "town": "Kapkornom, Soin/Sigowet",
+          "county": "Kericho"
+        }
+      ],
+      "website": "",
+      "summary": "First sugar mill in Kericho: 1,250 t cane/day, plans to double; makes its own power and (per later reports) ethanol. Likely bagasse self-sufficient, so the opportunity is off-season or co-firing top-up only.",
+      "current_fuel": "Own bagasse cogeneration (3 MW at start-up); no external fuel purchase evidenced",
+      "signals": [
+        "expansion: plan to double milling to 2,500 t/day"
+      ],
+      "fit_score": 63,
+      "score_breakdown": {
+        "heat": 30,
+        "distance": 20,
+        "fossil": 0,
+        "scale": 8,
+        "signals": 5,
+        "access": 0
+      },
+      "band": "strong",
+      "confidence": "medium",
+      "suggested_angle": "Off-season and ethanol-still top-up fuel; low priority until a shortfall signal appears. See https://jocateorg.com/insights/supply-lines",
+      "next_step": "Watch for bagasse shortfall or off-season fuel tenders before approaching",
+      "research_status": "new",
+      "evidence": [
+        {
+          "claim": "Mill started operations: 1,250 t cane/day, plan to double to 2,500 t/day; generates its own 3 MW power",
+          "url": "https://www.foodbusinessmea.com/west-valley-sugar-company-set-to-boost-kenyas-sugar-industry-as-operations-commence-in-us18-25m-milling-plant/",
+          "source": "Food Business MEA",
+          "date": "2023-12-08"
+        },
+        {
+          "claim": "Sh3.5bn project in Kapkornom, Soin/Sigowet, Kericho; 3 MW own power",
+          "url": "https://www.kenyanews.go.ke/sh3-5bn-kericho-sugar-factory-set-to-boost-sugarcane-farming/",
+          "source": "Kenya News Agency",
+          "date": "2023-06-05"
+        }
+      ],
+      "first_seen": "2026-11-20",
+      "last_reviewed": "2026-11-20"
     }
   ]
 }

@@ -30,3 +30,10 @@ The agent appends one entry per run, newest at the bottom. Each entry covers wha
 - Wasted time: "<company> boiler" queries for dairies, tea factories and Eldoret firms returned nothing; Nation and Kenyan Wall Street fetches give 403; Business Daily dairy pages are old (2011, 2015).
 - Insight: KTDA tea factories are shifting to electricity, briquettes and gasification, so tea firewood demand is shrinking; dairies and beverage plants are the better Tier A targets.
 - Next week: kericho-tea and limuru; verify fuel for VBL, Meru Dairy, New KCC; refresh Kentegra, Crystal Chillers, Kevian, Brookside, EAPM.
+
+## 2026-11-20 Prospecting (2026-W47, fourth run)
+- Hotspots: kericho-tea, limuru. Sectors: tea, dairy, sugar, food. Added 5 prospects (Browns Plantations, Nandi Creameries, Proctor & Allan, Chebango, West Valley Sugar), refreshed 10. Pipeline now 28 (1 closed).
+- Worked: Food Business MEA and Dairy Business MEA for dated expansion facts; KTDA autonomy news (Aug 2026) as a signal that factories may buy fuel separately; fetching the primary article to check a search-summary claim.
+- Wasted time: "<company> boiler" queries for Limuru and Kericho firms; job adverts are 2017-dated; a search summary claimed Limuru firms had switched to firewood but the cited article did not say so, so it was left out. Tender searches only returned past-deadline notices.
+- Insight: tea estates such as Finlays self-supply wood, and sugar mills self-supply bagasse, so they score high on the rubric but are weak real buyers. Consider capping heat score or adding a "self-supplied" flag.
+- Next week: kisumu-west and mombasa; sugar, ethanol, edible oil, port food. Refresh Kapa, Kevian, Githunguri, Rivatex, KWAL. Verify boiler fuel for the five priority prospects.
