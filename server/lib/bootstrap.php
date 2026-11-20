@@ -177,6 +177,21 @@ function jocate_migrate(PDO $db): void {
         resolved TINYINT NOT NULL DEFAULT 0,
         UNIQUE KEY field_value (field, value)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
+    // First-party, cookieless analytics: page views and contact clicks. visitor = daily salted hash, not reversible.
+    $db->exec("CREATE TABLE IF NOT EXISTS jocate_analytics (
+        id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        ts DATETIME NOT NULL,
+        day DATE NOT NULL,
+        kind VARCHAR(8) NOT NULL,
+        path VARCHAR(160) NOT NULL,
+        ref_host VARCHAR(120) NULL,
+        source VARCHAR(60) NULL,
+        event VARCHAR(30) NULL,
+        label VARCHAR(120) NULL,
+        device VARCHAR(8) NOT NULL,
+        visitor CHAR(16) NOT NULL,
+        INDEX (day), INDEX (kind, day), INDEX (visitor, day)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
 }
 
 function jocate_now(): string { return gmdate('Y-m-d H:i:s'); }

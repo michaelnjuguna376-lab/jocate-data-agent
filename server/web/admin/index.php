@@ -9,6 +9,7 @@ header("Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-in
 
 $home = dirname(__DIR__, 4);
 require_once $home . '/jocate-agent/server/lib/etl.php';
+require_once $home . '/jocate-agent/server/lib/analytics.php';
 
 session_name('jocate_admin');
 session_set_cookie_params(['lifetime' => 0, 'path' => '/admin/', 'secure' => true, 'httponly' => true, 'samesite' => 'Strict']);
@@ -120,6 +121,7 @@ $flash = $_SESSION['flash'] ?? null; unset($_SESSION['flash']);
     <div style="display:flex;gap:8px;flex-wrap:wrap">
       <form method="post"><input type="hidden" name="csrf" value="<?= h(csrf()) ?>"><input type="hidden" name="action" value="etl"><button class="btn btn-ghost" type="submit">Process new submissions</button></form>
       <a class="btn btn-ghost" href="?export=1">Export CSV</a>
+      <a class="btn btn-ghost" href="?view=analytics">Website analytics</a>
       <a class="btn btn-ghost" href="?view=partners">Potential partners</a>
       <a class="btn btn-ghost" href="?view=estimates">Calculator estimates</a>
       <a class="btn btn-ghost" href="?logout=1">Sign out</a>
@@ -215,6 +217,44 @@ $flash = $_SESSION['flash'] ?? null; unset($_SESSION['flash']);
     </form>
   </div>
   <?php endforeach; ?>
+<?php elseif (($_GET['view'] ?? '') === 'analytics'):
+    $days = in_array((int) ($_GET['days'] ?? 30), [7, 30, 90], true) ? (int) $_GET['days'] : 30;
+    $a = jocate_analytics_summary($days);
+    $maxDay = max(1, ...array_map(fn($d) => (int) $d['views'], $a['daily'] ?: [['views' => 1]]));
+    $evLabel = ['whatsapp' => 'WhatsApp', 'call' => 'Phone call', 'email' => 'Email', 'download' => 'Download', 'enquiry' => 'Enquiry form']; ?>
+  <p><a href="./">&larr; All contacts</a></p>
+  <h2 style="font-size:1.4rem;margin-bottom:4px">Website analytics</h2>
+  <p class="muted">First-party and cookieless: page views and contact clicks on jocateorg.com, without storing IP addresses. Bots are excluded. Since <?= h($a['since']) ?>.</p>
+  <div class="filters-row"><?php foreach ([7, 30, 90] as $d): ?><a href="?view=analytics&amp;days=<?= $d ?>" class="<?= $days === $d ? 'on' : '' ?>">Last <?= $d ?> days</a><?php endforeach; ?></div>
+  <div class="tiles">
+    <div class="tile"><strong><?= number_format($a['visitors']) ?></strong><span>Visitors (daily unique)</span></div>
+    <div class="tile"><strong><?= number_format($a['views']) ?></strong><span>Page views</span></div>
+    <div class="tile"><strong><?= number_format($a['contacts']) ?></strong><span>Contact clicks (WhatsApp, call, email, enquiry)</span></div>
+    <div class="tile"><strong><?= $a['views'] ? round($a['mobile'] * 100 / $a['views']) : 0 ?>%</strong><span>Views on mobile</span></div>
+  </div>
+  <h3 style="font-size:1.1rem">Page views per day</h3>
+  <div class="card" style="padding:16px">
+    <?php if (!$a['daily']): ?><p class="muted" style="margin:0">No visits recorded yet.</p><?php endif; ?>
+    <div class="bars">
+    <?php foreach ($a['daily'] as $d): ?>
+      <div class="bar-row" title="<?= h($d['day']) ?>: <?= (int) $d['views'] ?> views, <?= (int) $d['visitors'] ?> visitors, <?= (int) $d['events'] ?> contact clicks"><span><?= h(date('D j M', strtotime($d['day']))) ?></span><div class="bar-track"><div class="bar-fill" style="width:<?= round((int) $d['views'] * 100 / $maxDay, 1) ?>%"></div></div><span class="val"><?= (int) $d['views'] ?></span></div>
+    <?php endforeach; ?>
+    </div>
+  </div>
+  <div class="grid2" style="margin-top:20px">
+    <div><h3 style="font-size:1.1rem">Top pages</h3>
+      <div class="table-wrap"><table style="min-width:0"><thead><tr><th>Page</th><th>Views</th><th>Visitors</th></tr></thead><tbody>
+      <?php foreach ($a['pages'] as $r): ?><tr><td><a href="<?= h($r['path']) ?>" target="_blank" rel="noopener"><?= h($r['path']) ?></a></td><td><?= (int) $r['views'] ?></td><td><?= (int) $r['visitors'] ?></td></tr><?php endforeach; if (!$a['pages']): ?><tr><td colspan="3">None yet.</td></tr><?php endif; ?>
+      </tbody></table></div></div>
+    <div><h3 style="font-size:1.1rem">Where visitors came from</h3>
+      <div class="table-wrap"><table style="min-width:0"><thead><tr><th>Source</th><th>Views</th></tr></thead><tbody>
+      <?php foreach ($a['refs'] as $r): ?><tr><td><?= h($r['ref']) ?></td><td><?= (int) $r['views'] ?></td></tr><?php endforeach; if (!$a['refs']): ?><tr><td colspan="2">Only direct visits so far.</td></tr><?php endif; ?>
+      </tbody></table></div>
+      <h3 style="font-size:1.1rem;margin-top:20px">Contact clicks by page</h3>
+      <div class="table-wrap"><table style="min-width:0"><thead><tr><th>Action</th><th>Page</th><th>Clicks</th></tr></thead><tbody>
+      <?php foreach ($a['events'] as $r): ?><tr><td><?= h($evLabel[$r['event']] ?? $r['event']) ?></td><td><?= h($r['path']) ?></td><td><?= (int) $r['n'] ?></td></tr><?php endforeach; if (!$a['events']): ?><tr><td colspan="3">None yet.</td></tr><?php endif; ?>
+      </tbody></table></div></div>
+  </div>
 <?php elseif (($_GET['view'] ?? '') === 'estimates'):
     $rows = $db->query('SELECT l.id, l.created_at, l.fuel, l.monthly_tonnes, l.details, s.channel FROM jocate_leads l JOIN jocate_submissions s ON s.id=l.submission_id WHERE l.type="fuel_estimate" ORDER BY l.id DESC LIMIT 300')->fetchAll(); ?>
   <p><a href="./">&larr; All contacts</a></p>
