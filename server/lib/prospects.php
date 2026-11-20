@@ -102,7 +102,7 @@ function jocate_md_html(string $md): string {
 /** Email the latest weekly report to the company address, once per report week. */
 function jocate_prospects_email(array $import, bool $force = false): array {
     $cfg = jocate_config();
-    $to = $cfg['report_email'] ?? 'jocateorg@gmail.com';
+    $to = $cfg['report_email'] ?? 'jocateent@gmail.com';
     $latest = JOCATE_HOME . '/prospects/reports/LATEST.md';
     if (!is_file($latest) || !preg_match('/\(([0-9]{4}-W[0-9]{2})\.md\)/', (string) file_get_contents($latest), $m)) return ['sent' => false, 'reason' => 'no report yet'];
     $week = $m[1];
